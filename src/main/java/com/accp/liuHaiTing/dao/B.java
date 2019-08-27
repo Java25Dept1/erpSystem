@@ -1,5 +1,5 @@
 package com.accp.liuHaiTing.dao;
 
-public class A {
-	
+public class B {
+
 }
