@@ -32,8 +32,17 @@ public class Movepricedetail implements Serializable {
     public void setMoveorderno(String moveorderno) {
         this.moveorderno = moveorderno;
     }
-	
 	/**
+     * 物料编号
+     */
+    private String movematerielno;
+
+    /**
+     * 物料名称
+     */
+    private String movematerielname;
+
+    /**
      * 规格型号
      */
     private String movespectype;
@@ -51,17 +60,27 @@ public class Movepricedetail implements Serializable {
     /**
      * 现行平均成本
      */
-    private Double moveaveragecost;
+    private Integer moveaveragecost;
 
     /**
      * 单价（自己填）
      */
-    private Double moveprice;
+    private Integer moveprice;
 
     /**
      * 调价金额
      */
-    private Double movemoveprice;
+    private Integer movemoveprice;
+
+    /**
+     * 保留字段
+     */
+    private String safetyone;
+
+    /**
+     * 保留字段1
+     */
+    private String safetytwo;
 
     /**
      * 标识是否删除
@@ -69,6 +88,22 @@ public class Movepricedetail implements Serializable {
     private Integer enables;
 
     private static final long serialVersionUID = 1L;
+
+    public String getMovematerielno() {
+        return movematerielno;
+    }
+
+    public void setMovematerielno(String movematerielno) {
+        this.movematerielno = movematerielno;
+    }
+
+    public String getMovematerielname() {
+        return movematerielname;
+    }
+
+    public void setMovematerielname(String movematerielname) {
+        this.movematerielname = movematerielname;
+    }
 
     public String getMovespectype() {
         return movespectype;
@@ -94,28 +129,44 @@ public class Movepricedetail implements Serializable {
         this.movestocks = movestocks;
     }
 
-    public Double getMoveaveragecost() {
+    public Integer getMoveaveragecost() {
         return moveaveragecost;
     }
 
-    public void setMoveaveragecost(Double moveaveragecost) {
+    public void setMoveaveragecost(Integer moveaveragecost) {
         this.moveaveragecost = moveaveragecost;
     }
 
-    public Double getMoveprice() {
+    public Integer getMoveprice() {
         return moveprice;
     }
 
-    public void setMoveprice(Double moveprice) {
+    public void setMoveprice(Integer moveprice) {
         this.moveprice = moveprice;
     }
 
-    public Double getMovemoveprice() {
+    public Integer getMovemoveprice() {
         return movemoveprice;
     }
 
-    public void setMovemoveprice(Double movemoveprice) {
+    public void setMovemoveprice(Integer movemoveprice) {
         this.movemoveprice = movemoveprice;
+    }
+
+    public String getSafetyone() {
+        return safetyone;
+    }
+
+    public void setSafetyone(String safetyone) {
+        this.safetyone = safetyone;
+    }
+
+    public String getSafetytwo() {
+        return safetytwo;
+    }
+
+    public void setSafetytwo(String safetytwo) {
+        this.safetytwo = safetytwo;
     }
 
     public Integer getEnables() {
@@ -126,55 +177,37 @@ public class Movepricedetail implements Serializable {
         this.enables = enables;
     }
 
-	public Movepricedetail() {
-		super();
-	}
-
-	public Movepricedetail(Integer moveinile, String moveorderno, String movespectype, String moveunit,
-			Integer movestocks, Double moveaveragecost, Double moveprice, Double movemoveprice, Integer enables) {
+	public Movepricedetail(Integer moveinile, String moveorderno, String movematerielno, String movematerielname,
+			String movespectype, String moveunit, Integer movestocks, Integer moveaveragecost, Integer moveprice,
+			Integer movemoveprice, String safetyone, String safetytwo, Integer enables) {
 		super();
 		this.moveinile = moveinile;
 		this.moveorderno = moveorderno;
+		this.movematerielno = movematerielno;
+		this.movematerielname = movematerielname;
 		this.movespectype = movespectype;
 		this.moveunit = moveunit;
 		this.movestocks = movestocks;
 		this.moveaveragecost = moveaveragecost;
 		this.moveprice = moveprice;
 		this.movemoveprice = movemoveprice;
+		this.safetyone = safetyone;
+		this.safetytwo = safetytwo;
 		this.enables = enables;
 	}
 
-	public Movepricedetail(String movespectype, String moveunit, Integer movestocks, Double moveaveragecost,
-			Double moveprice, Double movemoveprice, Integer enables) {
+	public Movepricedetail() {
 		super();
-		this.movespectype = movespectype;
-		this.moveunit = moveunit;
-		this.movestocks = movestocks;
-		this.moveaveragecost = moveaveragecost;
-		this.moveprice = moveprice;
-		this.movemoveprice = movemoveprice;
-		this.enables = enables;
-	}
-
-	public Movepricedetail(String moveorderno, String movespectype, String moveunit, Integer movestocks,
-			Double moveaveragecost, Double moveprice, Double movemoveprice, Integer enables) {
-		super();
-		this.moveorderno = moveorderno;
-		this.movespectype = movespectype;
-		this.moveunit = moveunit;
-		this.movestocks = movestocks;
-		this.moveaveragecost = moveaveragecost;
-		this.moveprice = moveprice;
-		this.movemoveprice = movemoveprice;
-		this.enables = enables;
+		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public String toString() {
-		return "Movepricedetail [moveinile=" + moveinile + ", moveorderno=" + moveorderno + ", movespectype="
-				+ movespectype + ", moveunit=" + moveunit + ", movestocks=" + movestocks + ", moveaveragecost="
-				+ moveaveragecost + ", moveprice=" + moveprice + ", movemoveprice=" + movemoveprice + ", enables="
-				+ enables + "]";
+		return "Movepricedetail [moveinile=" + moveinile + ", moveorderno=" + moveorderno + ", movematerielno="
+				+ movematerielno + ", movematerielname=" + movematerielname + ", movespectype=" + movespectype
+				+ ", moveunit=" + moveunit + ", movestocks=" + movestocks + ", moveaveragecost=" + moveaveragecost
+				+ ", moveprice=" + moveprice + ", movemoveprice=" + movemoveprice + ", safetyone=" + safetyone
+				+ ", safetytwo=" + safetytwo + ", enables=" + enables + "]";
 	}
     
     
