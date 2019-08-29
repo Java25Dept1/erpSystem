@@ -2,6 +2,7 @@ package com.accp.common.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * payment  应付冲款单主表 
@@ -102,8 +103,73 @@ public class Payment implements Serializable {
      * 保留字段1
      */
     private String safetytwo;
+    
+    private List<Paymentdetails> details;//应付冲款单明细
+    
+    
 
-    private static final long serialVersionUID = 1L;
+    public Payment(Date paydate, String purveyid, String purveyname, String paystrike1, String paystrike2,
+			String paystrike3, Double paymoney1, Double paymoney2, Double paymoney3, String paymakeing, String paydept,
+			String stodeptid, String paycheckman, String payremark, Integer isaditing, Integer enables,
+			String safetyone, String safetytwo, List<Paymentdetails> details) {
+		super();
+		this.paydate = paydate;
+		this.purveyid = purveyid;
+		this.purveyname = purveyname;
+		this.paystrike1 = paystrike1;
+		this.paystrike2 = paystrike2;
+		this.paystrike3 = paystrike3;
+		this.paymoney1 = paymoney1;
+		this.paymoney2 = paymoney2;
+		this.paymoney3 = paymoney3;
+		this.paymakeing = paymakeing;
+		this.paydept = paydept;
+		this.stodeptid = stodeptid;
+		this.paycheckman = paycheckman;
+		this.payremark = payremark;
+		this.isaditing = isaditing;
+		this.enables = enables;
+		this.safetyone = safetyone;
+		this.safetytwo = safetytwo;
+		this.details = details;
+	}
+
+	public Payment(String payid, Date paydate, String purveyid, String purveyname, String paystrike1, String paystrike2,
+			String paystrike3, Double paymoney1, Double paymoney2, Double paymoney3, String paymakeing, String paydept,
+			String stodeptid, String paycheckman, String payremark, Integer isaditing, Integer enables,
+			String safetyone, String safetytwo, List<Paymentdetails> details) {
+		super();
+		this.payid = payid;
+		this.paydate = paydate;
+		this.purveyid = purveyid;
+		this.purveyname = purveyname;
+		this.paystrike1 = paystrike1;
+		this.paystrike2 = paystrike2;
+		this.paystrike3 = paystrike3;
+		this.paymoney1 = paymoney1;
+		this.paymoney2 = paymoney2;
+		this.paymoney3 = paymoney3;
+		this.paymakeing = paymakeing;
+		this.paydept = paydept;
+		this.stodeptid = stodeptid;
+		this.paycheckman = paycheckman;
+		this.payremark = payremark;
+		this.isaditing = isaditing;
+		this.enables = enables;
+		this.safetyone = safetyone;
+		this.safetytwo = safetytwo;
+		this.details = details;
+	}
+
+	public List<Paymentdetails> getDetails() {
+		return details;
+	}
+
+	public void setDetails(List<Paymentdetails> details) {
+		this.details = details;
+	}
+
+	private static final long serialVersionUID = 1L;
 
     public String getPayid() {
         return payid;

@@ -2,6 +2,7 @@ package com.accp.common.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * clashfund  应收冲款单主表
@@ -102,8 +103,73 @@ public class Clashfund implements Serializable {
      * 保留字段1
      */
     private String safetytwo;
+    
+    
+    private List<Clashfunddetails> details;//应收冲款单明细
+    
+    
 
-    private static final long serialVersionUID = 1L;
+    public Clashfund(String purveyid, String purveyname, String cfstrike1, String cfstrike2, String cfstrike3,
+			Double cfmoney1, Double cfmoney2, Double cfmoney3, String cfmakeing, String cfdept, String stodeptid,
+			String cfcheckman, String cfremark, Integer isaditing, Integer enables, String safetyone, String safetytwo,
+			List<Clashfunddetails> details) {
+		super();
+		this.purveyid = purveyid;
+		this.purveyname = purveyname;
+		this.cfstrike1 = cfstrike1;
+		this.cfstrike2 = cfstrike2;
+		this.cfstrike3 = cfstrike3;
+		this.cfmoney1 = cfmoney1;
+		this.cfmoney2 = cfmoney2;
+		this.cfmoney3 = cfmoney3;
+		this.cfmakeing = cfmakeing;
+		this.cfdept = cfdept;
+		this.stodeptid = stodeptid;
+		this.cfcheckman = cfcheckman;
+		this.cfremark = cfremark;
+		this.isaditing = isaditing;
+		this.enables = enables;
+		this.safetyone = safetyone;
+		this.safetytwo = safetytwo;
+		this.details = details;
+	}
+
+	public Clashfund(String cfid, Date cfdate, String purveyid, String purveyname, String cfstrike1, String cfstrike2,
+			String cfstrike3, Double cfmoney1, Double cfmoney2, Double cfmoney3, String cfmakeing, String cfdept,
+			String stodeptid, String cfcheckman, String cfremark, Integer isaditing, Integer enables, String safetyone,
+			String safetytwo, List<Clashfunddetails> details) {
+		super();
+		this.cfid = cfid;
+		this.cfdate = cfdate;
+		this.purveyid = purveyid;
+		this.purveyname = purveyname;
+		this.cfstrike1 = cfstrike1;
+		this.cfstrike2 = cfstrike2;
+		this.cfstrike3 = cfstrike3;
+		this.cfmoney1 = cfmoney1;
+		this.cfmoney2 = cfmoney2;
+		this.cfmoney3 = cfmoney3;
+		this.cfmakeing = cfmakeing;
+		this.cfdept = cfdept;
+		this.stodeptid = stodeptid;
+		this.cfcheckman = cfcheckman;
+		this.cfremark = cfremark;
+		this.isaditing = isaditing;
+		this.enables = enables;
+		this.safetyone = safetyone;
+		this.safetytwo = safetytwo;
+		this.details = details;
+	}
+
+	public List<Clashfunddetails> getDetails() {
+		return details;
+	}
+
+	public void setDetails(List<Clashfunddetails> details) {
+		this.details = details;
+	}
+
+	private static final long serialVersionUID = 1L;
 
     public String getCfid() {
         return cfid;

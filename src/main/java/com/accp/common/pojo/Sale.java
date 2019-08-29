@@ -2,6 +2,7 @@ package com.accp.common.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * sale  销售报价表 
@@ -112,8 +113,77 @@ public class Sale implements Serializable {
      * 合计含税金额
      */
     private Double totaltaxmoney;
+    
+    private List<Saleobey> details;//销售报价明细
+    
+    
 
-    private static final long serialVersionUID = 1L;
+    public Sale(String smcustomername, String smaddress, String smaddresstwo, String smtax, Date smdate,
+			String smnumber, String smcurrency, String smparities, String cliid, Integer smtype, Integer empid,
+			String empname, Integer depid, String depname, String makeempname, String auditingempname,
+			Integer checkstate, Double totalmoney, Double totaltax, Double totaltaxmoney, List<Saleobey> details) {
+		super();
+		this.smcustomername = smcustomername;
+		this.smaddress = smaddress;
+		this.smaddresstwo = smaddresstwo;
+		this.smtax = smtax;
+		this.smdate = smdate;
+		this.smnumber = smnumber;
+		this.smcurrency = smcurrency;
+		this.smparities = smparities;
+		this.cliid = cliid;
+		this.smtype = smtype;
+		this.empid = empid;
+		this.empname = empname;
+		this.depid = depid;
+		this.depname = depname;
+		this.makeempname = makeempname;
+		this.auditingempname = auditingempname;
+		this.checkstate = checkstate;
+		this.totalmoney = totalmoney;
+		this.totaltax = totaltax;
+		this.totaltaxmoney = totaltaxmoney;
+		this.details = details;
+	}
+
+	public Sale(Integer smid, String smcustomername, String smaddress, String smaddresstwo, String smtax, Date smdate,
+			String smnumber, String smcurrency, String smparities, String cliid, Integer smtype, Integer empid,
+			String empname, Integer depid, String depname, String makeempname, String auditingempname,
+			Integer checkstate, Double totalmoney, Double totaltax, Double totaltaxmoney, List<Saleobey> details) {
+		super();
+		this.smid = smid;
+		this.smcustomername = smcustomername;
+		this.smaddress = smaddress;
+		this.smaddresstwo = smaddresstwo;
+		this.smtax = smtax;
+		this.smdate = smdate;
+		this.smnumber = smnumber;
+		this.smcurrency = smcurrency;
+		this.smparities = smparities;
+		this.cliid = cliid;
+		this.smtype = smtype;
+		this.empid = empid;
+		this.empname = empname;
+		this.depid = depid;
+		this.depname = depname;
+		this.makeempname = makeempname;
+		this.auditingempname = auditingempname;
+		this.checkstate = checkstate;
+		this.totalmoney = totalmoney;
+		this.totaltax = totaltax;
+		this.totaltaxmoney = totaltaxmoney;
+		this.details = details;
+	}
+
+	public List<Saleobey> getDetails() {
+		return details;
+	}
+
+	public void setDetails(List<Saleobey> details) {
+		this.details = details;
+	}
+
+	private static final long serialVersionUID = 1L;
 
     public Integer getSmid() {
         return smid;

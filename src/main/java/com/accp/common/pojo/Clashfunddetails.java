@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * clashfunddetails
+ * clashfunddetails  应收冲款单明细表
  * @author 
  */
 public class Clashfunddetails implements Serializable {

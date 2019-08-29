@@ -2,6 +2,7 @@ package com.accp.common.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * stockapportion  采购分摊主表  
@@ -57,8 +58,65 @@ public class Stockapportion implements Serializable {
      * 保留字段
      */
     private String safetytwo;
+    
+    private List<Apportionresult> result;//采购分摊结果明细
 
-    private static final long serialVersionUID = 1L;
+    private List<Apportiondetails> details;//采购分摊费用明细
+    
+    
+    
+    public Stockapportion(Date appdate, String wisname, Double appamtmoney, String makeperson, String auditingperson,
+			String estate, Integer enables, String safetyone, String safetytwo, List<Apportionresult> result,
+			List<Apportiondetails> details) {
+		super();
+		this.appdate = appdate;
+		this.wisname = wisname;
+		this.appamtmoney = appamtmoney;
+		this.makeperson = makeperson;
+		this.auditingperson = auditingperson;
+		this.estate = estate;
+		this.enables = enables;
+		this.safetyone = safetyone;
+		this.safetytwo = safetytwo;
+		this.result = result;
+		this.details = details;
+	}
+
+	public Stockapportion(String appid, Date appdate, String wisname, Double appamtmoney, String makeperson,
+			String auditingperson, String estate, Integer enables, String safetyone, String safetytwo,
+			List<Apportionresult> result, List<Apportiondetails> details) {
+		super();
+		this.appid = appid;
+		this.appdate = appdate;
+		this.wisname = wisname;
+		this.appamtmoney = appamtmoney;
+		this.makeperson = makeperson;
+		this.auditingperson = auditingperson;
+		this.estate = estate;
+		this.enables = enables;
+		this.safetyone = safetyone;
+		this.safetytwo = safetytwo;
+		this.result = result;
+		this.details = details;
+	}
+
+	public List<Apportionresult> getResult() {
+		return result;
+	}
+
+	public void setResult(List<Apportionresult> result) {
+		this.result = result;
+	}
+
+	public List<Apportiondetails> getDetails() {
+		return details;
+	}
+
+	public void setDetails(List<Apportiondetails> details) {
+		this.details = details;
+	}
+
+	private static final long serialVersionUID = 1L;
 
     public String getAppid() {
         return appid;

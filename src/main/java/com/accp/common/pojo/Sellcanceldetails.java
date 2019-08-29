@@ -3,7 +3,7 @@ package com.accp.common.pojo;
 import java.io.Serializable;
 
 /**
- * sellcanceldetails
+ * sellcanceldetails  销售退货明细表 
  * @author 
  */
 public class Sellcanceldetails implements Serializable {

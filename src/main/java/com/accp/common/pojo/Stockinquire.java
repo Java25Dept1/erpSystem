@@ -2,6 +2,7 @@ package com.accp.common.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * stockinquire  采购询价主表  
@@ -127,8 +128,85 @@ public class Stockinquire implements Serializable {
      * 扩展字段4
      */
     private String extend4;
+    
+    private List<Stockinquiredetails> details;//采购询价明细
+    
+    
 
-    private static final long serialVersionUID = 1L;
+    public Stockinquire(String stopname, String stopid, String stopaddress, Date sotdate, Date stoavdate,
+			String stoistax, String stodaddress, String stomakeperson, String stoauditingperson, String stostockperson,
+			String stopersonid, String stodept, String stodeptid, String stoauditing, String stockinquirename,
+			Integer enables, String safetyone, String safetytwo, String extend0, String extend1, String extend2,
+			String extend3, String extend4, List<Stockinquiredetails> details) {
+		super();
+		this.stopname = stopname;
+		this.stopid = stopid;
+		this.stopaddress = stopaddress;
+		this.sotdate = sotdate;
+		this.stoavdate = stoavdate;
+		this.stoistax = stoistax;
+		this.stodaddress = stodaddress;
+		this.stomakeperson = stomakeperson;
+		this.stoauditingperson = stoauditingperson;
+		this.stostockperson = stostockperson;
+		this.stopersonid = stopersonid;
+		this.stodept = stodept;
+		this.stodeptid = stodeptid;
+		this.stoauditing = stoauditing;
+		this.stockinquirename = stockinquirename;
+		this.enables = enables;
+		this.safetyone = safetyone;
+		this.safetytwo = safetytwo;
+		this.extend0 = extend0;
+		this.extend1 = extend1;
+		this.extend2 = extend2;
+		this.extend3 = extend3;
+		this.extend4 = extend4;
+		this.details = details;
+	}
+
+	public Stockinquire(String stoid, String stopname, String stopid, String stopaddress, Date sotdate, Date stoavdate,
+			String stoistax, String stodaddress, String stomakeperson, String stoauditingperson, String stostockperson,
+			String stopersonid, String stodept, String stodeptid, String stoauditing, String stockinquirename,
+			Integer enables, String safetyone, String safetytwo, String extend0, String extend1, String extend2,
+			String extend3, String extend4, List<Stockinquiredetails> details) {
+		super();
+		this.stoid = stoid;
+		this.stopname = stopname;
+		this.stopid = stopid;
+		this.stopaddress = stopaddress;
+		this.sotdate = sotdate;
+		this.stoavdate = stoavdate;
+		this.stoistax = stoistax;
+		this.stodaddress = stodaddress;
+		this.stomakeperson = stomakeperson;
+		this.stoauditingperson = stoauditingperson;
+		this.stostockperson = stostockperson;
+		this.stopersonid = stopersonid;
+		this.stodept = stodept;
+		this.stodeptid = stodeptid;
+		this.stoauditing = stoauditing;
+		this.stockinquirename = stockinquirename;
+		this.enables = enables;
+		this.safetyone = safetyone;
+		this.safetytwo = safetytwo;
+		this.extend0 = extend0;
+		this.extend1 = extend1;
+		this.extend2 = extend2;
+		this.extend3 = extend3;
+		this.extend4 = extend4;
+		this.details = details;
+	}
+
+	public List<Stockinquiredetails> getDetails() {
+		return details;
+	}
+
+	public void setDetails(List<Stockinquiredetails> details) {
+		this.details = details;
+	}
+
+	private static final long serialVersionUID = 1L;
 
     public String getStoid() {
         return stoid;

@@ -2,6 +2,7 @@ package com.accp.common.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * provideinfo  供应商主文件设定   
@@ -237,8 +238,147 @@ public class Provideinfo implements Serializable {
      * 备注
      */
     private String peoremark;
+    
+    private List<Supplieraddress> address;//供应商地址
+    
+    
 
-    private static final long serialVersionUID = 1L;
+    public Provideinfo(String peoid, List<Supplieraddress> address) {
+		super();
+		this.peoid = peoid;
+		this.address = address;
+	}
+
+	public Provideinfo(String peoname, String peoshortname, String peoabbreviation, String peofullname,
+			String peoascription, String peopeeid, String peopeename, String peoarea, String peocurrency,
+			String peoprincipal, String peolinkman, String peophoneone, String peophonetwo, String peophonethree,
+			String peomobilephone, String peobankaccounts, String peoopenbank, String peopersonnel,
+			String peoregistration, String peocalling, String peoemail, String peoweb, String peofaxes,
+			Date peoldoutdate, Date peoldodate, Date peonewoutdate, Date peonewodate, String peoincluded,
+			String peoterminadate, Double peozhangkuanedu, Double peoremainedu, String peopayment,
+			Double peomonthreckoning, String peocreditrating, String peoinvoicetype, Double peoqcprepaymoney,
+			Double peoqcdealmoney, Double peoqmprepaymoney, Double peoqmdealmoney, String peoadvance,
+			String peoaccounts, String peoassessed, String peocustombarone, String peocustombartow, String peoremark,
+			List<Supplieraddress> address) {
+		super();
+		this.peoname = peoname;
+		this.peoshortname = peoshortname;
+		this.peoabbreviation = peoabbreviation;
+		this.peofullname = peofullname;
+		this.peoascription = peoascription;
+		this.peopeeid = peopeeid;
+		this.peopeename = peopeename;
+		this.peoarea = peoarea;
+		this.peocurrency = peocurrency;
+		this.peoprincipal = peoprincipal;
+		this.peolinkman = peolinkman;
+		this.peophoneone = peophoneone;
+		this.peophonetwo = peophonetwo;
+		this.peophonethree = peophonethree;
+		this.peomobilephone = peomobilephone;
+		this.peobankaccounts = peobankaccounts;
+		this.peoopenbank = peoopenbank;
+		this.peopersonnel = peopersonnel;
+		this.peoregistration = peoregistration;
+		this.peocalling = peocalling;
+		this.peoemail = peoemail;
+		this.peoweb = peoweb;
+		this.peofaxes = peofaxes;
+		this.peoldoutdate = peoldoutdate;
+		this.peoldodate = peoldodate;
+		this.peonewoutdate = peonewoutdate;
+		this.peonewodate = peonewodate;
+		this.peoincluded = peoincluded;
+		this.peoterminadate = peoterminadate;
+		this.peozhangkuanedu = peozhangkuanedu;
+		this.peoremainedu = peoremainedu;
+		this.peopayment = peopayment;
+		this.peomonthreckoning = peomonthreckoning;
+		this.peocreditrating = peocreditrating;
+		this.peoinvoicetype = peoinvoicetype;
+		this.peoqcprepaymoney = peoqcprepaymoney;
+		this.peoqcdealmoney = peoqcdealmoney;
+		this.peoqmprepaymoney = peoqmprepaymoney;
+		this.peoqmdealmoney = peoqmdealmoney;
+		this.peoadvance = peoadvance;
+		this.peoaccounts = peoaccounts;
+		this.peoassessed = peoassessed;
+		this.peocustombarone = peocustombarone;
+		this.peocustombartow = peocustombartow;
+		this.peoremark = peoremark;
+		this.address = address;
+	}
+
+	public Provideinfo(String peoid, String peoname, String peoshortname, String peoabbreviation, String peofullname,
+			String peoascription, String peopeeid, String peopeename, String peoarea, String peocurrency,
+			String peoprincipal, String peolinkman, String peophoneone, String peophonetwo, String peophonethree,
+			String peomobilephone, String peobankaccounts, String peoopenbank, String peopersonnel,
+			String peoregistration, String peocalling, String peoemail, String peoweb, String peofaxes,
+			Date peoldoutdate, Date peoldodate, Date peonewoutdate, Date peonewodate, String peoincluded,
+			String peoterminadate, Double peozhangkuanedu, Double peoremainedu, String peopayment,
+			Double peomonthreckoning, String peocreditrating, String peoinvoicetype, Double peoqcprepaymoney,
+			Double peoqcdealmoney, Double peoqmprepaymoney, Double peoqmdealmoney, String peoadvance,
+			String peoaccounts, String peoassessed, String peocustombarone, String peocustombartow, String peoremark,
+			List<Supplieraddress> address) {
+		super();
+		this.peoid = peoid;
+		this.peoname = peoname;
+		this.peoshortname = peoshortname;
+		this.peoabbreviation = peoabbreviation;
+		this.peofullname = peofullname;
+		this.peoascription = peoascription;
+		this.peopeeid = peopeeid;
+		this.peopeename = peopeename;
+		this.peoarea = peoarea;
+		this.peocurrency = peocurrency;
+		this.peoprincipal = peoprincipal;
+		this.peolinkman = peolinkman;
+		this.peophoneone = peophoneone;
+		this.peophonetwo = peophonetwo;
+		this.peophonethree = peophonethree;
+		this.peomobilephone = peomobilephone;
+		this.peobankaccounts = peobankaccounts;
+		this.peoopenbank = peoopenbank;
+		this.peopersonnel = peopersonnel;
+		this.peoregistration = peoregistration;
+		this.peocalling = peocalling;
+		this.peoemail = peoemail;
+		this.peoweb = peoweb;
+		this.peofaxes = peofaxes;
+		this.peoldoutdate = peoldoutdate;
+		this.peoldodate = peoldodate;
+		this.peonewoutdate = peonewoutdate;
+		this.peonewodate = peonewodate;
+		this.peoincluded = peoincluded;
+		this.peoterminadate = peoterminadate;
+		this.peozhangkuanedu = peozhangkuanedu;
+		this.peoremainedu = peoremainedu;
+		this.peopayment = peopayment;
+		this.peomonthreckoning = peomonthreckoning;
+		this.peocreditrating = peocreditrating;
+		this.peoinvoicetype = peoinvoicetype;
+		this.peoqcprepaymoney = peoqcprepaymoney;
+		this.peoqcdealmoney = peoqcdealmoney;
+		this.peoqmprepaymoney = peoqmprepaymoney;
+		this.peoqmdealmoney = peoqmdealmoney;
+		this.peoadvance = peoadvance;
+		this.peoaccounts = peoaccounts;
+		this.peoassessed = peoassessed;
+		this.peocustombarone = peocustombarone;
+		this.peocustombartow = peocustombartow;
+		this.peoremark = peoremark;
+		this.address = address;
+	}
+
+	public List<Supplieraddress> getAddress() {
+		return address;
+	}
+
+	public void setAddress(List<Supplieraddress> address) {
+		this.address = address;
+	}
+
+	private static final long serialVersionUID = 1L;
 
     public String getPeoid() {
         return peoid;

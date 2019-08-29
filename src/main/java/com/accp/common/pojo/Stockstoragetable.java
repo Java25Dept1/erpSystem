@@ -2,6 +2,7 @@ package com.accp.common.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * stockstoragetable  采购入库主表 
@@ -127,8 +128,85 @@ public class Stockstoragetable implements Serializable {
      * 扩展字段4
      */
     private String extend4;
+    
+    private List<Stockstoragedetails> details;//采购入库明细  
+    
+    
 
-    private static final long serialVersionUID = 1L;
+    public Stockstoragetable(Date storagedate, String purveyid, String purveyname, String purveyaddress, String depotid,
+			String depotname, String pricerevenue, String stoperson, String stodept, String stodeptid,
+			String audituserid, String repeatuserid, String remark, Integer estate, String stockstoragetablename,
+			Integer enables, String safetyone, String safetytwo, String extend0, String extend1, String extend2,
+			String extend3, String extend4, List<Stockstoragedetails> details) {
+		super();
+		this.storagedate = storagedate;
+		this.purveyid = purveyid;
+		this.purveyname = purveyname;
+		this.purveyaddress = purveyaddress;
+		this.depotid = depotid;
+		this.depotname = depotname;
+		this.pricerevenue = pricerevenue;
+		this.stoperson = stoperson;
+		this.stodept = stodept;
+		this.stodeptid = stodeptid;
+		this.audituserid = audituserid;
+		this.repeatuserid = repeatuserid;
+		this.remark = remark;
+		this.estate = estate;
+		this.stockstoragetablename = stockstoragetablename;
+		this.enables = enables;
+		this.safetyone = safetyone;
+		this.safetytwo = safetytwo;
+		this.extend0 = extend0;
+		this.extend1 = extend1;
+		this.extend2 = extend2;
+		this.extend3 = extend3;
+		this.extend4 = extend4;
+		this.details = details;
+	}
+
+	public Stockstoragetable(String stockstorageno, Date storagedate, String purveyid, String purveyname,
+			String purveyaddress, String depotid, String depotname, String pricerevenue, String stoperson,
+			String stodept, String stodeptid, String audituserid, String repeatuserid, String remark, Integer estate,
+			String stockstoragetablename, Integer enables, String safetyone, String safetytwo, String extend0,
+			String extend1, String extend2, String extend3, String extend4, List<Stockstoragedetails> details) {
+		super();
+		this.stockstorageno = stockstorageno;
+		this.storagedate = storagedate;
+		this.purveyid = purveyid;
+		this.purveyname = purveyname;
+		this.purveyaddress = purveyaddress;
+		this.depotid = depotid;
+		this.depotname = depotname;
+		this.pricerevenue = pricerevenue;
+		this.stoperson = stoperson;
+		this.stodept = stodept;
+		this.stodeptid = stodeptid;
+		this.audituserid = audituserid;
+		this.repeatuserid = repeatuserid;
+		this.remark = remark;
+		this.estate = estate;
+		this.stockstoragetablename = stockstoragetablename;
+		this.enables = enables;
+		this.safetyone = safetyone;
+		this.safetytwo = safetytwo;
+		this.extend0 = extend0;
+		this.extend1 = extend1;
+		this.extend2 = extend2;
+		this.extend3 = extend3;
+		this.extend4 = extend4;
+		this.details = details;
+	}
+
+	public List<Stockstoragedetails> getDetails() {
+		return details;
+	}
+
+	public void setDetails(List<Stockstoragedetails> details) {
+		this.details = details;
+	}
+
+	private static final long serialVersionUID = 1L;
 
     public String getStockstorageno() {
         return stockstorageno;

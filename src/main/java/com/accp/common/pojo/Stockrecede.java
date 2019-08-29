@@ -2,6 +2,7 @@ package com.accp.common.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * stockrecede  采购退货主表
@@ -137,8 +138,89 @@ public class Stockrecede implements Serializable {
      * 扩展字段4
      */
     private String extend4;
+    
+    public List<Recededetails> details;//采购退货明细表 
+    
+    
 
-    private static final long serialVersionUID = 1L;
+    public Stockrecede(Date recdate, String peoid, String purveyname, String peoaddress, String stoid, String depotname,
+			Integer containtax, Integer anewstorage, String stoperson, String stopersonid, String stodept,
+			String stodeptid, String makeperson, String auditingperson, String recremark, String estate,
+			String stockrecedename, Integer enables, String safetyone, String safetytwo, String extend0, String extend1,
+			String extend2, String extend3, String extend4, List<Recededetails> details) {
+		super();
+		this.recdate = recdate;
+		this.peoid = peoid;
+		this.purveyname = purveyname;
+		this.peoaddress = peoaddress;
+		this.stoid = stoid;
+		this.depotname = depotname;
+		this.containtax = containtax;
+		this.anewstorage = anewstorage;
+		this.stoperson = stoperson;
+		this.stopersonid = stopersonid;
+		this.stodept = stodept;
+		this.stodeptid = stodeptid;
+		this.makeperson = makeperson;
+		this.auditingperson = auditingperson;
+		this.recremark = recremark;
+		this.estate = estate;
+		this.stockrecedename = stockrecedename;
+		this.enables = enables;
+		this.safetyone = safetyone;
+		this.safetytwo = safetytwo;
+		this.extend0 = extend0;
+		this.extend1 = extend1;
+		this.extend2 = extend2;
+		this.extend3 = extend3;
+		this.extend4 = extend4;
+		this.details = details;
+	}
+
+	public Stockrecede(String recid, Date recdate, String peoid, String purveyname, String peoaddress, String stoid,
+			String depotname, Integer containtax, Integer anewstorage, String stoperson, String stopersonid,
+			String stodept, String stodeptid, String makeperson, String auditingperson, String recremark, String estate,
+			String stockrecedename, Integer enables, String safetyone, String safetytwo, String extend0, String extend1,
+			String extend2, String extend3, String extend4, List<Recededetails> details) {
+		super();
+		this.recid = recid;
+		this.recdate = recdate;
+		this.peoid = peoid;
+		this.purveyname = purveyname;
+		this.peoaddress = peoaddress;
+		this.stoid = stoid;
+		this.depotname = depotname;
+		this.containtax = containtax;
+		this.anewstorage = anewstorage;
+		this.stoperson = stoperson;
+		this.stopersonid = stopersonid;
+		this.stodept = stodept;
+		this.stodeptid = stodeptid;
+		this.makeperson = makeperson;
+		this.auditingperson = auditingperson;
+		this.recremark = recremark;
+		this.estate = estate;
+		this.stockrecedename = stockrecedename;
+		this.enables = enables;
+		this.safetyone = safetyone;
+		this.safetytwo = safetytwo;
+		this.extend0 = extend0;
+		this.extend1 = extend1;
+		this.extend2 = extend2;
+		this.extend3 = extend3;
+		this.extend4 = extend4;
+		this.details = details;
+	}
+
+	public List<Recededetails> getDetails() {
+		return details;
+	}
+
+	public void setDetails(List<Recededetails> details) {
+		this.details = details;
+	}
+
+	private static final long serialVersionUID = 1L;
 
     public String getRecid() {
         return recid;

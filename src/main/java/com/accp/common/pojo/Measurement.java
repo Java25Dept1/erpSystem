@@ -3,7 +3,7 @@ package com.accp.common.pojo;
 import java.io.Serializable;
 
 /**
- * measurement
+ * measurement  计量单位设定    
  * @author 
  */
 public class Measurement implements Serializable {

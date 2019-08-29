@@ -2,6 +2,7 @@ package com.accp.common.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * othercome  其它入库主表  
@@ -48,7 +49,46 @@ public class Othercome implements Serializable {
      */
     private String othcomerepeatuserid;
 
-    private static final long serialVersionUID = 1L;
+    private List<Othercomedetail> details;//其它入库明细
+    
+    
+    
+    public Othercome(Date othcomedate, String othcometypeid, String othcomestore, String othcomename,
+			String othcomedept, String othcomemakemanid, String othcomerepeatuserid, List<Othercomedetail> details) {
+		super();
+		this.othcomedate = othcomedate;
+		this.othcometypeid = othcometypeid;
+		this.othcomestore = othcomestore;
+		this.othcomename = othcomename;
+		this.othcomedept = othcomedept;
+		this.othcomemakemanid = othcomemakemanid;
+		this.othcomerepeatuserid = othcomerepeatuserid;
+		this.details = details;
+	}
+
+	public Othercome(String othcomeid, Date othcomedate, String othcometypeid, String othcomestore, String othcomename,
+			String othcomedept, String othcomemakemanid, String othcomerepeatuserid, List<Othercomedetail> details) {
+		super();
+		this.othcomeid = othcomeid;
+		this.othcomedate = othcomedate;
+		this.othcometypeid = othcometypeid;
+		this.othcomestore = othcomestore;
+		this.othcomename = othcomename;
+		this.othcomedept = othcomedept;
+		this.othcomemakemanid = othcomemakemanid;
+		this.othcomerepeatuserid = othcomerepeatuserid;
+		this.details = details;
+	}
+
+	public List<Othercomedetail> getDetails() {
+		return details;
+	}
+
+	public void setDetails(List<Othercomedetail> details) {
+		this.details = details;
+	}
+
+	private static final long serialVersionUID = 1L;
 
     public String getOthcomeid() {
         return othcomeid;

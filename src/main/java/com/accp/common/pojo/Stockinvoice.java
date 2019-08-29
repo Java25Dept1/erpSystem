@@ -2,6 +2,7 @@ package com.accp.common.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * stockinvoice  采购发票主表
@@ -10,23 +11,23 @@ import java.util.Date;
 public class Stockinvoice implements Serializable {
 	 private String sysid;
 
-	    private String fundbillno;
+    private String fundbillno;
 
-	    public String getSysid() {
-	        return sysid;
-	    }
+    public String getSysid() {
+        return sysid;
+    }
 
-	    public void setSysid(String sysid) {
-	        this.sysid = sysid;
-	    }
+    public void setSysid(String sysid) {
+        this.sysid = sysid;
+    }
 
-	    public String getFundbillno() {
-	        return fundbillno;
-	    }
+    public String getFundbillno() {
+        return fundbillno;
+    }
 
-	    public void setFundbillno(String fundbillno) {
-	        this.fundbillno = fundbillno;
-	    }
+    public void setFundbillno(String fundbillno) {
+        this.fundbillno = fundbillno;
+    }
 	
 	private Date billdate;
 
@@ -92,7 +93,107 @@ public class Stockinvoice implements Serializable {
 
     private String custflag;
 
-    private static final long serialVersionUID = 1L;
+    private List<Invoicedetails> details;//采购发票详细
+    
+    
+    
+    public Stockinvoice(String fundbillno, Date billdate, String peoid, String purveyname, String billtype,
+			String invoice, String affirmstate, String invoiceid, String voucherno, String currid, String cvoucherno,
+			String exchrate, String total, String tax, String cashpay, String visapay, String offset, String discount,
+			String localtotal, String localtax, String localcashpay, String localvisapay, String localoffset,
+			String prepayday, String dueto, String saleman, String mark, String permitter, String project,
+			String remark, String safetyone, String safetytwo, String custflag, List<Invoicedetails> details) {
+		super();
+		this.fundbillno = fundbillno;
+		this.billdate = billdate;
+		this.peoid = peoid;
+		this.purveyname = purveyname;
+		this.billtype = billtype;
+		this.invoice = invoice;
+		this.affirmstate = affirmstate;
+		this.invoiceid = invoiceid;
+		this.voucherno = voucherno;
+		this.currid = currid;
+		this.cvoucherno = cvoucherno;
+		this.exchrate = exchrate;
+		this.total = total;
+		this.tax = tax;
+		this.cashpay = cashpay;
+		this.visapay = visapay;
+		this.offset = offset;
+		this.discount = discount;
+		this.localtotal = localtotal;
+		this.localtax = localtax;
+		this.localcashpay = localcashpay;
+		this.localvisapay = localvisapay;
+		this.localoffset = localoffset;
+		this.prepayday = prepayday;
+		this.dueto = dueto;
+		this.saleman = saleman;
+		this.mark = mark;
+		this.permitter = permitter;
+		this.project = project;
+		this.remark = remark;
+		this.safetyone = safetyone;
+		this.safetytwo = safetytwo;
+		this.custflag = custflag;
+		this.details = details;
+	}
+
+	public Stockinvoice(String sysid, String fundbillno, Date billdate, String peoid, String purveyname,
+			String billtype, String invoice, String affirmstate, String invoiceid, String voucherno, String currid,
+			String cvoucherno, String exchrate, String total, String tax, String cashpay, String visapay, String offset,
+			String discount, String localtotal, String localtax, String localcashpay, String localvisapay,
+			String localoffset, String prepayday, String dueto, String saleman, String mark, String permitter,
+			String project, String remark, String safetyone, String safetytwo, String custflag,
+			List<Invoicedetails> details) {
+		super();
+		this.sysid = sysid;
+		this.fundbillno = fundbillno;
+		this.billdate = billdate;
+		this.peoid = peoid;
+		this.purveyname = purveyname;
+		this.billtype = billtype;
+		this.invoice = invoice;
+		this.affirmstate = affirmstate;
+		this.invoiceid = invoiceid;
+		this.voucherno = voucherno;
+		this.currid = currid;
+		this.cvoucherno = cvoucherno;
+		this.exchrate = exchrate;
+		this.total = total;
+		this.tax = tax;
+		this.cashpay = cashpay;
+		this.visapay = visapay;
+		this.offset = offset;
+		this.discount = discount;
+		this.localtotal = localtotal;
+		this.localtax = localtax;
+		this.localcashpay = localcashpay;
+		this.localvisapay = localvisapay;
+		this.localoffset = localoffset;
+		this.prepayday = prepayday;
+		this.dueto = dueto;
+		this.saleman = saleman;
+		this.mark = mark;
+		this.permitter = permitter;
+		this.project = project;
+		this.remark = remark;
+		this.safetyone = safetyone;
+		this.safetytwo = safetytwo;
+		this.custflag = custflag;
+		this.details = details;
+	}
+
+	public List<Invoicedetails> getDetails() {
+		return details;
+	}
+
+	public void setDetails(List<Invoicedetails> details) {
+		this.details = details;
+	}
+
+	private static final long serialVersionUID = 1L;
 
     public Date getBilldate() {
         return billdate;

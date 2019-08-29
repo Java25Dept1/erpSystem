@@ -2,6 +2,7 @@ package com.accp.common.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * sellcancel  销售退货表
@@ -132,8 +133,87 @@ public class Sellcancel implements Serializable {
      * 标识是否删除
      */
     private Integer enables;
+    
+    private List<Sellcanceldetails> details;//销售退货明细
+    
+    
 
-    private static final long serialVersionUID = 1L;
+    public Sellcancel(Date billdate, Integer sinid, String cliid, String clishortname, String cliplaceid,
+			String cliplace, Date effectdate, String currencytype, String pricewhethertax, String stoid, String stoname,
+			Integer whetheranewenterstorage, String empid, String empname, String depid, String depname,
+			String makeempname, String auditingempname, Integer checkstate, String remark, Double totalmoney,
+			Double totaltax, Double totaltaxmoney, Integer enables, List<Sellcanceldetails> details) {
+		super();
+		this.billdate = billdate;
+		this.sinid = sinid;
+		this.cliid = cliid;
+		this.clishortname = clishortname;
+		this.cliplaceid = cliplaceid;
+		this.cliplace = cliplace;
+		this.effectdate = effectdate;
+		this.currencytype = currencytype;
+		this.pricewhethertax = pricewhethertax;
+		this.stoid = stoid;
+		this.stoname = stoname;
+		this.whetheranewenterstorage = whetheranewenterstorage;
+		this.empid = empid;
+		this.empname = empname;
+		this.depid = depid;
+		this.depname = depname;
+		this.makeempname = makeempname;
+		this.auditingempname = auditingempname;
+		this.checkstate = checkstate;
+		this.remark = remark;
+		this.totalmoney = totalmoney;
+		this.totaltax = totaltax;
+		this.totaltaxmoney = totaltaxmoney;
+		this.enables = enables;
+		this.details = details;
+	}
+
+	public Sellcancel(String billid, Date billdate, Integer sinid, String cliid, String clishortname, String cliplaceid,
+			String cliplace, Date effectdate, String currencytype, String pricewhethertax, String stoid, String stoname,
+			Integer whetheranewenterstorage, String empid, String empname, String depid, String depname,
+			String makeempname, String auditingempname, Integer checkstate, String remark, Double totalmoney,
+			Double totaltax, Double totaltaxmoney, Integer enables, List<Sellcanceldetails> details) {
+		super();
+		this.billid = billid;
+		this.billdate = billdate;
+		this.sinid = sinid;
+		this.cliid = cliid;
+		this.clishortname = clishortname;
+		this.cliplaceid = cliplaceid;
+		this.cliplace = cliplace;
+		this.effectdate = effectdate;
+		this.currencytype = currencytype;
+		this.pricewhethertax = pricewhethertax;
+		this.stoid = stoid;
+		this.stoname = stoname;
+		this.whetheranewenterstorage = whetheranewenterstorage;
+		this.empid = empid;
+		this.empname = empname;
+		this.depid = depid;
+		this.depname = depname;
+		this.makeempname = makeempname;
+		this.auditingempname = auditingempname;
+		this.checkstate = checkstate;
+		this.remark = remark;
+		this.totalmoney = totalmoney;
+		this.totaltax = totaltax;
+		this.totaltaxmoney = totaltaxmoney;
+		this.enables = enables;
+		this.details = details;
+	}
+
+	public List<Sellcanceldetails> getDetails() {
+		return details;
+	}
+
+	public void setDetails(List<Sellcanceldetails> details) {
+		this.details = details;
+	}
+
+	private static final long serialVersionUID = 1L;
 
     public String getBillid() {
         return billid;

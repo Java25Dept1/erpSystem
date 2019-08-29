@@ -2,6 +2,7 @@ package com.accp.common.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * advancegather  预收款主表
@@ -117,8 +118,81 @@ public class Advancegather implements Serializable {
      * 保留字段
      */
     private String safetytwo;
+    
+    private List<Advancegatherdetails> details;
+    
+    
 
-    private static final long serialVersionUID = 1L;
+    public Advancegather(Date adcdate, String purveyid, String purveyname, String adcstrike1, String adcstrike2,
+			String adcstrike3, Double adcmoney1, Double adcmoney2, Double adcmoney3, String advcurrencytype,
+			Double exchangerate, String adcmakeing, String stodept, String stodeptid, String adccheckman,
+			String adcremark, Integer isaditing, Integer checkstate, Integer enables, String safetyone,
+			String safetytwo, List<Advancegatherdetails> details) {
+		super();
+		this.adcdate = adcdate;
+		this.purveyid = purveyid;
+		this.purveyname = purveyname;
+		this.adcstrike1 = adcstrike1;
+		this.adcstrike2 = adcstrike2;
+		this.adcstrike3 = adcstrike3;
+		this.adcmoney1 = adcmoney1;
+		this.adcmoney2 = adcmoney2;
+		this.adcmoney3 = adcmoney3;
+		this.advcurrencytype = advcurrencytype;
+		this.exchangerate = exchangerate;
+		this.adcmakeing = adcmakeing;
+		this.stodept = stodept;
+		this.stodeptid = stodeptid;
+		this.adccheckman = adccheckman;
+		this.adcremark = adcremark;
+		this.isaditing = isaditing;
+		this.checkstate = checkstate;
+		this.enables = enables;
+		this.safetyone = safetyone;
+		this.safetytwo = safetytwo;
+		this.details = details;
+	}
+
+	public Advancegather(String adcid, Date adcdate, String purveyid, String purveyname, String adcstrike1,
+			String adcstrike2, String adcstrike3, Double adcmoney1, Double adcmoney2, Double adcmoney3,
+			String advcurrencytype, Double exchangerate, String adcmakeing, String stodept, String stodeptid,
+			String adccheckman, String adcremark, Integer isaditing, Integer checkstate, Integer enables,
+			String safetyone, String safetytwo, List<Advancegatherdetails> details) {
+		super();
+		this.adcid = adcid;
+		this.adcdate = adcdate;
+		this.purveyid = purveyid;
+		this.purveyname = purveyname;
+		this.adcstrike1 = adcstrike1;
+		this.adcstrike2 = adcstrike2;
+		this.adcstrike3 = adcstrike3;
+		this.adcmoney1 = adcmoney1;
+		this.adcmoney2 = adcmoney2;
+		this.adcmoney3 = adcmoney3;
+		this.advcurrencytype = advcurrencytype;
+		this.exchangerate = exchangerate;
+		this.adcmakeing = adcmakeing;
+		this.stodept = stodept;
+		this.stodeptid = stodeptid;
+		this.adccheckman = adccheckman;
+		this.adcremark = adcremark;
+		this.isaditing = isaditing;
+		this.checkstate = checkstate;
+		this.enables = enables;
+		this.safetyone = safetyone;
+		this.safetytwo = safetytwo;
+		this.details = details;
+	}
+
+	public List<Advancegatherdetails> getDetails() {
+		return details;
+	}
+
+	public void setDetails(List<Advancegatherdetails> details) {
+		this.details = details;
+	}
+
+	private static final long serialVersionUID = 1L;
 
     public String getAdcid() {
         return adcid;

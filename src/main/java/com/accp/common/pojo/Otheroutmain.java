@@ -2,6 +2,7 @@ package com.accp.common.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * otheroutmain  其它出库主表
@@ -57,8 +58,51 @@ public class Otheroutmain implements Serializable {
      * 凭证编号
      */
     private String othbzid;
+    
+    private List<Otheroutdetail> details;//其它出库明细
+    
 
-    private static final long serialVersionUID = 1L;
+    public Otheroutmain(Date othdate, String othouttypeid, String othstore, String othoutname, String othdept,
+			String othmakemanid, String othrepeatuserid, String othidno, String othbzid, List<Otheroutdetail> details) {
+		super();
+		this.othdate = othdate;
+		this.othouttypeid = othouttypeid;
+		this.othstore = othstore;
+		this.othoutname = othoutname;
+		this.othdept = othdept;
+		this.othmakemanid = othmakemanid;
+		this.othrepeatuserid = othrepeatuserid;
+		this.othidno = othidno;
+		this.othbzid = othbzid;
+		this.details = details;
+	}
+
+	public Otheroutmain(String othid, Date othdate, String othouttypeid, String othstore, String othoutname,
+			String othdept, String othmakemanid, String othrepeatuserid, String othidno, String othbzid,
+			List<Otheroutdetail> details) {
+		super();
+		this.othid = othid;
+		this.othdate = othdate;
+		this.othouttypeid = othouttypeid;
+		this.othstore = othstore;
+		this.othoutname = othoutname;
+		this.othdept = othdept;
+		this.othmakemanid = othmakemanid;
+		this.othrepeatuserid = othrepeatuserid;
+		this.othidno = othidno;
+		this.othbzid = othbzid;
+		this.details = details;
+	}
+
+	public List<Otheroutdetail> getDetails() {
+		return details;
+	}
+
+	public void setDetails(List<Otheroutdetail> details) {
+		this.details = details;
+	}
+
+	private static final long serialVersionUID = 1L;
 
     public String getOthid() {
         return othid;

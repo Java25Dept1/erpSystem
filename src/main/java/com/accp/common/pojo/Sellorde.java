@@ -2,6 +2,7 @@ package com.accp.common.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * sellorde  销售订单表
@@ -117,8 +118,81 @@ public class Sellorde implements Serializable {
      * 合计含税金额
      */
     private Integer totaltaxmoney;
+    
+    private List<Orderdetails> details;//销售订单明细
+    
+    
 
-    private static final long serialVersionUID = 1L;
+    public Sellorde(String secustomername, String seaddress, String seaddresstwo, String setype, String setax,
+			String sestatus, Date sedate, String senumber, String seorder, String securrency, String separities,
+			Integer empid, String empname, Integer depid, String depname, String makeempname, String auditingempname,
+			String checkstate, Integer totalmoney, Integer totaltax, Integer totaltaxmoney,
+			List<Orderdetails> details) {
+		super();
+		this.secustomername = secustomername;
+		this.seaddress = seaddress;
+		this.seaddresstwo = seaddresstwo;
+		this.setype = setype;
+		this.setax = setax;
+		this.sestatus = sestatus;
+		this.sedate = sedate;
+		this.senumber = senumber;
+		this.seorder = seorder;
+		this.securrency = securrency;
+		this.separities = separities;
+		this.empid = empid;
+		this.empname = empname;
+		this.depid = depid;
+		this.depname = depname;
+		this.makeempname = makeempname;
+		this.auditingempname = auditingempname;
+		this.checkstate = checkstate;
+		this.totalmoney = totalmoney;
+		this.totaltax = totaltax;
+		this.totaltaxmoney = totaltaxmoney;
+		this.details = details;
+	}
+
+	public Sellorde(Integer seid, String secustomername, String seaddress, String seaddresstwo, String setype,
+			String setax, String sestatus, Date sedate, String senumber, String seorder, String securrency,
+			String separities, Integer empid, String empname, Integer depid, String depname, String makeempname,
+			String auditingempname, String checkstate, Integer totalmoney, Integer totaltax, Integer totaltaxmoney,
+			List<Orderdetails> details) {
+		super();
+		this.seid = seid;
+		this.secustomername = secustomername;
+		this.seaddress = seaddress;
+		this.seaddresstwo = seaddresstwo;
+		this.setype = setype;
+		this.setax = setax;
+		this.sestatus = sestatus;
+		this.sedate = sedate;
+		this.senumber = senumber;
+		this.seorder = seorder;
+		this.securrency = securrency;
+		this.separities = separities;
+		this.empid = empid;
+		this.empname = empname;
+		this.depid = depid;
+		this.depname = depname;
+		this.makeempname = makeempname;
+		this.auditingempname = auditingempname;
+		this.checkstate = checkstate;
+		this.totalmoney = totalmoney;
+		this.totaltax = totaltax;
+		this.totaltaxmoney = totaltaxmoney;
+		this.details = details;
+	}
+
+	public List<Orderdetails> getDetails() {
+		return details;
+	}
+
+	public void setDetails(List<Orderdetails> details) {
+		this.details = details;
+	}
+
+	private static final long serialVersionUID = 1L;
 
     public Integer getSeid() {
         return seid;

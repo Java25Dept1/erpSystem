@@ -2,6 +2,7 @@ package com.accp.common.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * stockapply  采购请购主表
@@ -107,8 +108,76 @@ public class Stockapply implements Serializable {
      * 扩展字段4
      */
     private String extend4;
+    
+    private List<Stockapplydetails> details;//采购请购明细
+    
+    
 
-    private static final long serialVersionUID = 1L;
+    public Stockapply(Date appdate, String apptype, Integer appcircs, String appperson, String apppersonid,
+			String appdept, String appdeptid, String appmaker, String appauditingperson, String appauditing,
+			String stockapplyname, Integer enables, String safetyone, String safetytwo, String extend0, String extend1,
+			String extend2, String extend3, String extend4, List<Stockapplydetails> details) {
+		super();
+		this.appdate = appdate;
+		this.apptype = apptype;
+		this.appcircs = appcircs;
+		this.appperson = appperson;
+		this.apppersonid = apppersonid;
+		this.appdept = appdept;
+		this.appdeptid = appdeptid;
+		this.appmaker = appmaker;
+		this.appauditingperson = appauditingperson;
+		this.appauditing = appauditing;
+		this.stockapplyname = stockapplyname;
+		this.enables = enables;
+		this.safetyone = safetyone;
+		this.safetytwo = safetytwo;
+		this.extend0 = extend0;
+		this.extend1 = extend1;
+		this.extend2 = extend2;
+		this.extend3 = extend3;
+		this.extend4 = extend4;
+		this.details = details;
+	}
+
+	public Stockapply(String appid, Date appdate, String apptype, Integer appcircs, String appperson,
+			String apppersonid, String appdept, String appdeptid, String appmaker, String appauditingperson,
+			String appauditing, String stockapplyname, Integer enables, String safetyone, String safetytwo,
+			String extend0, String extend1, String extend2, String extend3, String extend4,
+			List<Stockapplydetails> details) {
+		super();
+		this.appid = appid;
+		this.appdate = appdate;
+		this.apptype = apptype;
+		this.appcircs = appcircs;
+		this.appperson = appperson;
+		this.apppersonid = apppersonid;
+		this.appdept = appdept;
+		this.appdeptid = appdeptid;
+		this.appmaker = appmaker;
+		this.appauditingperson = appauditingperson;
+		this.appauditing = appauditing;
+		this.stockapplyname = stockapplyname;
+		this.enables = enables;
+		this.safetyone = safetyone;
+		this.safetytwo = safetytwo;
+		this.extend0 = extend0;
+		this.extend1 = extend1;
+		this.extend2 = extend2;
+		this.extend3 = extend3;
+		this.extend4 = extend4;
+		this.details = details;
+	}
+
+	public List<Stockapplydetails> getDetails() {
+		return details;
+	}
+
+	public void setDetails(List<Stockapplydetails> details) {
+		this.details = details;
+	}
+
+	private static final long serialVersionUID = 1L;
 
     public String getAppid() {
         return appid;

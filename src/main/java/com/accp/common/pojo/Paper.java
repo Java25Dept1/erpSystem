@@ -2,6 +2,7 @@ package com.accp.common.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * paper  销售发票主表 
@@ -132,8 +133,99 @@ public class Paper implements Serializable {
      * 合计含税金额
      */
     private Double totaltaxmoney;
+    
+    private List<Selectdet> selectdet;//销售发票内容明细
+    
+    private List<Selectpaper> selectpaper;//销售发票清单明细
 
-    private static final long serialVersionUID = 1L;
+    
+    
+    public Paper(Date billdate, Integer sinid, String cliid, String clishortname, String cliplaceid, String cliplace,
+			Date effectdate, String currencytype, String pricewhethertax, String stoid, String stoname,
+			Integer wherecheck, String empid, String empname, String depid, String depname, String makeempname,
+			String auditingempname, Integer checkstate, Integer enable, String remark, Double totalmoney,
+			Double totaltax, Double totaltaxmoney, List<Selectdet> selectdet, List<Selectpaper> selectpaper) {
+		super();
+		this.billdate = billdate;
+		this.sinid = sinid;
+		this.cliid = cliid;
+		this.clishortname = clishortname;
+		this.cliplaceid = cliplaceid;
+		this.cliplace = cliplace;
+		this.effectdate = effectdate;
+		this.currencytype = currencytype;
+		this.pricewhethertax = pricewhethertax;
+		this.stoid = stoid;
+		this.stoname = stoname;
+		this.wherecheck = wherecheck;
+		this.empid = empid;
+		this.empname = empname;
+		this.depid = depid;
+		this.depname = depname;
+		this.makeempname = makeempname;
+		this.auditingempname = auditingempname;
+		this.checkstate = checkstate;
+		this.enable = enable;
+		this.remark = remark;
+		this.totalmoney = totalmoney;
+		this.totaltax = totaltax;
+		this.totaltaxmoney = totaltaxmoney;
+		this.selectdet = selectdet;
+		this.selectpaper = selectpaper;
+	}
+
+	public Paper(String billid, Date billdate, Integer sinid, String cliid, String clishortname, String cliplaceid,
+			String cliplace, Date effectdate, String currencytype, String pricewhethertax, String stoid, String stoname,
+			Integer wherecheck, String empid, String empname, String depid, String depname, String makeempname,
+			String auditingempname, Integer checkstate, Integer enable, String remark, Double totalmoney,
+			Double totaltax, Double totaltaxmoney, List<Selectdet> selectdet, List<Selectpaper> selectpaper) {
+		super();
+		this.billid = billid;
+		this.billdate = billdate;
+		this.sinid = sinid;
+		this.cliid = cliid;
+		this.clishortname = clishortname;
+		this.cliplaceid = cliplaceid;
+		this.cliplace = cliplace;
+		this.effectdate = effectdate;
+		this.currencytype = currencytype;
+		this.pricewhethertax = pricewhethertax;
+		this.stoid = stoid;
+		this.stoname = stoname;
+		this.wherecheck = wherecheck;
+		this.empid = empid;
+		this.empname = empname;
+		this.depid = depid;
+		this.depname = depname;
+		this.makeempname = makeempname;
+		this.auditingempname = auditingempname;
+		this.checkstate = checkstate;
+		this.enable = enable;
+		this.remark = remark;
+		this.totalmoney = totalmoney;
+		this.totaltax = totaltax;
+		this.totaltaxmoney = totaltaxmoney;
+		this.selectdet = selectdet;
+		this.selectpaper = selectpaper;
+	}
+
+	public List<Selectdet> getSelectdet() {
+		return selectdet;
+	}
+
+	public void setSelectdet(List<Selectdet> selectdet) {
+		this.selectdet = selectdet;
+	}
+
+	public List<Selectpaper> getSelectpaper() {
+		return selectpaper;
+	}
+
+	public void setSelectpaper(List<Selectpaper> selectpaper) {
+		this.selectpaper = selectpaper;
+	}
+
+	private static final long serialVersionUID = 1L;
 
     public String getBillid() {
         return billid;

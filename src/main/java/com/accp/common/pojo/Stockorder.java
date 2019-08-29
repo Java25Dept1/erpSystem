@@ -2,6 +2,7 @@ package com.accp.common.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * stockorder  采购订单主表    
@@ -132,8 +133,87 @@ public class Stockorder implements Serializable {
      * 扩展字段4
      */
     private String extend4;
+    
+    private List<Stockorderdetails> details;//采购订单明细
+    
+    
 
-    private static final long serialVersionUID = 1L;
+    public Stockorder(Date stodate, String stopeoname, String stopeoid, String stopeoadress, String stoistax,
+			Integer stostate, String stoadress, String stoempstock, String stopersonid, String stodept,
+			String stodeptid, String stoempname, String stoempcheck, String stomark, Integer checkstate,
+			String stockordername, Integer enables, String safetyone, String safetytwo, String extend0, String extend1,
+			String extend2, String extend3, String extend4, List<Stockorderdetails> details) {
+		super();
+		this.stodate = stodate;
+		this.stopeoname = stopeoname;
+		this.stopeoid = stopeoid;
+		this.stopeoadress = stopeoadress;
+		this.stoistax = stoistax;
+		this.stostate = stostate;
+		this.stoadress = stoadress;
+		this.stoempstock = stoempstock;
+		this.stopersonid = stopersonid;
+		this.stodept = stodept;
+		this.stodeptid = stodeptid;
+		this.stoempname = stoempname;
+		this.stoempcheck = stoempcheck;
+		this.stomark = stomark;
+		this.checkstate = checkstate;
+		this.stockordername = stockordername;
+		this.enables = enables;
+		this.safetyone = safetyone;
+		this.safetytwo = safetytwo;
+		this.extend0 = extend0;
+		this.extend1 = extend1;
+		this.extend2 = extend2;
+		this.extend3 = extend3;
+		this.extend4 = extend4;
+		this.details = details;
+	}
+
+	public Stockorder(String stoid, Date stodate, String stopeoname, String stopeoid, String stopeoadress,
+			String stoistax, Integer stostate, String stoadress, String stoempstock, String stopersonid, String stodept,
+			String stodeptid, String stoempname, String stoempcheck, String stomark, Integer checkstate,
+			String stockordername, Integer enables, String safetyone, String safetytwo, String extend0, String extend1,
+			String extend2, String extend3, String extend4, List<Stockorderdetails> details) {
+		super();
+		this.stoid = stoid;
+		this.stodate = stodate;
+		this.stopeoname = stopeoname;
+		this.stopeoid = stopeoid;
+		this.stopeoadress = stopeoadress;
+		this.stoistax = stoistax;
+		this.stostate = stostate;
+		this.stoadress = stoadress;
+		this.stoempstock = stoempstock;
+		this.stopersonid = stopersonid;
+		this.stodept = stodept;
+		this.stodeptid = stodeptid;
+		this.stoempname = stoempname;
+		this.stoempcheck = stoempcheck;
+		this.stomark = stomark;
+		this.checkstate = checkstate;
+		this.stockordername = stockordername;
+		this.enables = enables;
+		this.safetyone = safetyone;
+		this.safetytwo = safetytwo;
+		this.extend0 = extend0;
+		this.extend1 = extend1;
+		this.extend2 = extend2;
+		this.extend3 = extend3;
+		this.extend4 = extend4;
+		this.details = details;
+	}
+
+	public List<Stockorderdetails> getDetails() {
+		return details;
+	}
+
+	public void setDetails(List<Stockorderdetails> details) {
+		this.details = details;
+	}
+
+	private static final long serialVersionUID = 1L;
 
     public String getStoid() {
         return stoid;

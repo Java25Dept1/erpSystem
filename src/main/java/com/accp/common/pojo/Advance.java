@@ -2,6 +2,7 @@ package com.accp.common.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * advance  预付款主表
@@ -112,8 +113,79 @@ public class Advance implements Serializable {
      * 保留字段2
      */
     private String safetytwo;
+    
+    private List<Advancedetails> details;//预付款明细
+    
+    
 
-    private static final long serialVersionUID = 1L;
+    public Advance(Date advdate, String purveyid, String purveyname, String advstrike1, String advstrike2,
+			String advstrike3, Double advmoney1, Double advmoney2, Double advmoney3, String advcurrencytype,
+			Double exchangerate, String advmakeing, String stodept, String stodeptid, String advcheckman,
+			String advremark, Integer isaditing, Integer enables, String safetyone, String safetytwo,
+			List<Advancedetails> details) {
+		super();
+		this.advdate = advdate;
+		this.purveyid = purveyid;
+		this.purveyname = purveyname;
+		this.advstrike1 = advstrike1;
+		this.advstrike2 = advstrike2;
+		this.advstrike3 = advstrike3;
+		this.advmoney1 = advmoney1;
+		this.advmoney2 = advmoney2;
+		this.advmoney3 = advmoney3;
+		this.advcurrencytype = advcurrencytype;
+		this.exchangerate = exchangerate;
+		this.advmakeing = advmakeing;
+		this.stodept = stodept;
+		this.stodeptid = stodeptid;
+		this.advcheckman = advcheckman;
+		this.advremark = advremark;
+		this.isaditing = isaditing;
+		this.enables = enables;
+		this.safetyone = safetyone;
+		this.safetytwo = safetytwo;
+		this.details = details;
+	}
+
+	public List<Advancedetails> getDetails() {
+		return details;
+	}
+
+	public void setDetails(List<Advancedetails> details) {
+		this.details = details;
+	}
+
+	public Advance(String advid, Date advdate, String purveyid, String purveyname, String advstrike1, String advstrike2,
+			String advstrike3, Double advmoney1, Double advmoney2, Double advmoney3, String advcurrencytype,
+			Double exchangerate, String advmakeing, String stodept, String stodeptid, String advcheckman,
+			String advremark, Integer isaditing, Integer enables, String safetyone, String safetytwo,
+			List<Advancedetails> details) {
+		super();
+		this.advid = advid;
+		this.advdate = advdate;
+		this.purveyid = purveyid;
+		this.purveyname = purveyname;
+		this.advstrike1 = advstrike1;
+		this.advstrike2 = advstrike2;
+		this.advstrike3 = advstrike3;
+		this.advmoney1 = advmoney1;
+		this.advmoney2 = advmoney2;
+		this.advmoney3 = advmoney3;
+		this.advcurrencytype = advcurrencytype;
+		this.exchangerate = exchangerate;
+		this.advmakeing = advmakeing;
+		this.stodept = stodept;
+		this.stodeptid = stodeptid;
+		this.advcheckman = advcheckman;
+		this.advremark = advremark;
+		this.isaditing = isaditing;
+		this.enables = enables;
+		this.safetyone = safetyone;
+		this.safetytwo = safetytwo;
+		this.details = details;
+	}
+
+	private static final long serialVersionUID = 1L;
 
     public String getAdvid() {
         return advid;

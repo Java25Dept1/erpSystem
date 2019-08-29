@@ -2,6 +2,7 @@ package com.accp.common.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * moveprice  调价主表
@@ -52,8 +53,50 @@ public class Moveprice implements Serializable {
      * 标识是否删除
      */
     private Integer enables;
+    
+    private List<Movepricedetail> details;//调价明细
+    
+    
 
-    private static final long serialVersionUID = 1L;
+    public Moveprice(Date movedate, String moveadjust, String movestorageno, String movemake, String movecheck,
+			String moveremark, Integer moveauditingstate, Integer enables, List<Movepricedetail> details) {
+		super();
+		this.movedate = movedate;
+		this.moveadjust = moveadjust;
+		this.movestorageno = movestorageno;
+		this.movemake = movemake;
+		this.movecheck = movecheck;
+		this.moveremark = moveremark;
+		this.moveauditingstate = moveauditingstate;
+		this.enables = enables;
+		this.details = details;
+	}
+
+	public Moveprice(String moveorderno, Date movedate, String moveadjust, String movestorageno, String movemake,
+			String movecheck, String moveremark, Integer moveauditingstate, Integer enables,
+			List<Movepricedetail> details) {
+		super();
+		this.moveorderno = moveorderno;
+		this.movedate = movedate;
+		this.moveadjust = moveadjust;
+		this.movestorageno = movestorageno;
+		this.movemake = movemake;
+		this.movecheck = movecheck;
+		this.moveremark = moveremark;
+		this.moveauditingstate = moveauditingstate;
+		this.enables = enables;
+		this.details = details;
+	}
+
+	public List<Movepricedetail> getDetails() {
+		return details;
+	}
+
+	public void setDetails(List<Movepricedetail> details) {
+		this.details = details;
+	}
+
+	private static final long serialVersionUID = 1L;
 
     public String getMoveorderno() {
         return moveorderno;

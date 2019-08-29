@@ -2,6 +2,7 @@ package com.accp.common.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * checked  盘点主表
@@ -81,8 +82,53 @@ public class Checked implements Serializable {
      * 标识是否删除
      */
     private Integer enables;
+    
+    private List<Checkdetail> details;//盘点明细
+    
+    
 
-    private static final long serialVersionUID = 1L;
+    public Checked(String chestorageno, String chestoragename, Date chedate, String cheman, String chedeptname,
+			String cherestrictman, String cheauditingman, Integer chestatu, Integer enables,
+			List<Checkdetail> details) {
+		super();
+		this.chestorageno = chestorageno;
+		this.chestoragename = chestoragename;
+		this.chedate = chedate;
+		this.cheman = cheman;
+		this.chedeptname = chedeptname;
+		this.cherestrictman = cherestrictman;
+		this.cheauditingman = cheauditingman;
+		this.chestatu = chestatu;
+		this.enables = enables;
+		this.details = details;
+	}
+
+	public Checked(String cheid, String chestorageno, String chestoragename, Date chedate, String cheman,
+			String chedeptname, String cherestrictman, String cheauditingman, Integer chestatu, Integer enables,
+			List<Checkdetail> details) {
+		super();
+		this.cheid = cheid;
+		this.chestorageno = chestorageno;
+		this.chestoragename = chestoragename;
+		this.chedate = chedate;
+		this.cheman = cheman;
+		this.chedeptname = chedeptname;
+		this.cherestrictman = cherestrictman;
+		this.cheauditingman = cheauditingman;
+		this.chestatu = chestatu;
+		this.enables = enables;
+		this.details = details;
+	}
+
+	public List<Checkdetail> getDetails() {
+		return details;
+	}
+
+	public void setDetails(List<Checkdetail> details) {
+		this.details = details;
+	}
+
+	private static final long serialVersionUID = 1L;
 
     public String getChestoragename() {
         return chestoragename;

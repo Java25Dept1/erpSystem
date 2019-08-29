@@ -2,6 +2,7 @@ package com.accp.common.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * sellissueorder  销售出库主表
@@ -142,8 +143,93 @@ public class Sellissueorder implements Serializable {
      * 销售出库名称
      */
     private String saleclassname;
+    
+    private List<Sellissueorderdetails> details;// 销售出库明细
 
-    private static final long serialVersionUID = 1L;
+    
+    
+    public Sellissueorder(Date billdate, Integer sinid, String sinname, String cliid, String clishortname,
+			String cliplaceid, String cliplace, Date effectdate, String currencytype, String pricewhethertax,
+			String stoid, String stoname, String empid, String empname, String depid, String depname,
+			String makeempname, String auditingempname, Integer checkstate, String remark, Double totalmoney,
+			Double totaltax, Double totaltaxmoney, Integer enables, Integer saleclassid, String saleclassname,
+			List<Sellissueorderdetails> details) {
+		super();
+		this.billdate = billdate;
+		this.sinid = sinid;
+		this.sinname = sinname;
+		this.cliid = cliid;
+		this.clishortname = clishortname;
+		this.cliplaceid = cliplaceid;
+		this.cliplace = cliplace;
+		this.effectdate = effectdate;
+		this.currencytype = currencytype;
+		this.pricewhethertax = pricewhethertax;
+		this.stoid = stoid;
+		this.stoname = stoname;
+		this.empid = empid;
+		this.empname = empname;
+		this.depid = depid;
+		this.depname = depname;
+		this.makeempname = makeempname;
+		this.auditingempname = auditingempname;
+		this.checkstate = checkstate;
+		this.remark = remark;
+		this.totalmoney = totalmoney;
+		this.totaltax = totaltax;
+		this.totaltaxmoney = totaltaxmoney;
+		this.enables = enables;
+		this.saleclassid = saleclassid;
+		this.saleclassname = saleclassname;
+		this.details = details;
+	}
+
+	public Sellissueorder(String billid, Date billdate, Integer sinid, String sinname, String cliid,
+			String clishortname, String cliplaceid, String cliplace, Date effectdate, String currencytype,
+			String pricewhethertax, String stoid, String stoname, String empid, String empname, String depid,
+			String depname, String makeempname, String auditingempname, Integer checkstate, String remark,
+			Double totalmoney, Double totaltax, Double totaltaxmoney, Integer enables, Integer saleclassid,
+			String saleclassname, List<Sellissueorderdetails> details) {
+		super();
+		this.billid = billid;
+		this.billdate = billdate;
+		this.sinid = sinid;
+		this.sinname = sinname;
+		this.cliid = cliid;
+		this.clishortname = clishortname;
+		this.cliplaceid = cliplaceid;
+		this.cliplace = cliplace;
+		this.effectdate = effectdate;
+		this.currencytype = currencytype;
+		this.pricewhethertax = pricewhethertax;
+		this.stoid = stoid;
+		this.stoname = stoname;
+		this.empid = empid;
+		this.empname = empname;
+		this.depid = depid;
+		this.depname = depname;
+		this.makeempname = makeempname;
+		this.auditingempname = auditingempname;
+		this.checkstate = checkstate;
+		this.remark = remark;
+		this.totalmoney = totalmoney;
+		this.totaltax = totaltax;
+		this.totaltaxmoney = totaltaxmoney;
+		this.enables = enables;
+		this.saleclassid = saleclassid;
+		this.saleclassname = saleclassname;
+		this.details = details;
+	}
+
+	public List<Sellissueorderdetails> getDetails() {
+		return details;
+	}
+
+	public void setDetails(List<Sellissueorderdetails> details) {
+		this.details = details;
+	}
+
+	private static final long serialVersionUID = 1L;
 
     public String getBillid() {
         return billid;

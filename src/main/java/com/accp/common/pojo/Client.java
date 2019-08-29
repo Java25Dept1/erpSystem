@@ -2,6 +2,7 @@ package com.accp.common.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * client  客户主文件设定
@@ -262,8 +263,151 @@ public class Client implements Serializable {
      * 备注
      */
     private String cliotherremark;
+    
+    private List<Clientaddress> address;//客户地址
+    
+    
 
-    private static final long serialVersionUID = 1L;
+    public Client(String clitypeid, String cliaccounts, String cliname, String clishortname, String cliaddress,
+			String cliarea, String cliename, String clieshortname, String cliprincipal, String clilinkman,
+			String cliphoneone, String cliphonetwo, String cliphonethree, String clibankaccounts, String cliopenbank,
+			String clidouble, String clicategory, String cliempid, String cliempname, String climobilephone,
+			String cliemail, String cliweb, String clifaxes, Date clioldoutdate, Date clioldodate, Date clinewoutdate,
+			Date clinewodate, String clidiscount, String clipricestep, Date clicreatedate, String cliunitprice,
+			String clicustomerdouble, Date cliaappoment, Date cliappoment, Date clistopdate, String clizhangkuanedu,
+			String cliremainedu, String clicondition, Date climonthreckoning, String clicreditstep, String cliinvoice,
+			String clireceivables, Double cliqcpremoney, Double cliqcdealmoney, Double cliqmpremoney,
+			Double cliqmdealmoney, String cliadvancee, String clicolumnoneone, String clicolumnonetow,
+			String cliotherremark, List<Clientaddress> address) {
+		super();
+		this.clitypeid = clitypeid;
+		this.cliaccounts = cliaccounts;
+		this.cliname = cliname;
+		this.clishortname = clishortname;
+		this.cliaddress = cliaddress;
+		this.cliarea = cliarea;
+		this.cliename = cliename;
+		this.clieshortname = clieshortname;
+		this.cliprincipal = cliprincipal;
+		this.clilinkman = clilinkman;
+		this.cliphoneone = cliphoneone;
+		this.cliphonetwo = cliphonetwo;
+		this.cliphonethree = cliphonethree;
+		this.clibankaccounts = clibankaccounts;
+		this.cliopenbank = cliopenbank;
+		this.clidouble = clidouble;
+		this.clicategory = clicategory;
+		this.cliempid = cliempid;
+		this.cliempname = cliempname;
+		this.climobilephone = climobilephone;
+		this.cliemail = cliemail;
+		this.cliweb = cliweb;
+		this.clifaxes = clifaxes;
+		this.clioldoutdate = clioldoutdate;
+		this.clioldodate = clioldodate;
+		this.clinewoutdate = clinewoutdate;
+		this.clinewodate = clinewodate;
+		this.clidiscount = clidiscount;
+		this.clipricestep = clipricestep;
+		this.clicreatedate = clicreatedate;
+		this.cliunitprice = cliunitprice;
+		this.clicustomerdouble = clicustomerdouble;
+		this.cliaappoment = cliaappoment;
+		this.cliappoment = cliappoment;
+		this.clistopdate = clistopdate;
+		this.clizhangkuanedu = clizhangkuanedu;
+		this.cliremainedu = cliremainedu;
+		this.clicondition = clicondition;
+		this.climonthreckoning = climonthreckoning;
+		this.clicreditstep = clicreditstep;
+		this.cliinvoice = cliinvoice;
+		this.clireceivables = clireceivables;
+		this.cliqcpremoney = cliqcpremoney;
+		this.cliqcdealmoney = cliqcdealmoney;
+		this.cliqmpremoney = cliqmpremoney;
+		this.cliqmdealmoney = cliqmdealmoney;
+		this.cliadvancee = cliadvancee;
+		this.clicolumnoneone = clicolumnoneone;
+		this.clicolumnonetow = clicolumnonetow;
+		this.cliotherremark = cliotherremark;
+		this.address = address;
+	}
+
+	public Client(String cliid, String clitypeid, String cliaccounts, String cliname, String clishortname,
+			String cliaddress, String cliarea, String cliename, String clieshortname, String cliprincipal,
+			String clilinkman, String cliphoneone, String cliphonetwo, String cliphonethree, String clibankaccounts,
+			String cliopenbank, String clidouble, String clicategory, String cliempid, String cliempname,
+			String climobilephone, String cliemail, String cliweb, String clifaxes, Date clioldoutdate,
+			Date clioldodate, Date clinewoutdate, Date clinewodate, String clidiscount, String clipricestep,
+			Date clicreatedate, String cliunitprice, String clicustomerdouble, Date cliaappoment, Date cliappoment,
+			Date clistopdate, String clizhangkuanedu, String cliremainedu, String clicondition, Date climonthreckoning,
+			String clicreditstep, String cliinvoice, String clireceivables, Double cliqcpremoney, Double cliqcdealmoney,
+			Double cliqmpremoney, Double cliqmdealmoney, String cliadvancee, String clicolumnoneone,
+			String clicolumnonetow, String cliotherremark, List<Clientaddress> address) {
+		super();
+		this.cliid = cliid;
+		this.clitypeid = clitypeid;
+		this.cliaccounts = cliaccounts;
+		this.cliname = cliname;
+		this.clishortname = clishortname;
+		this.cliaddress = cliaddress;
+		this.cliarea = cliarea;
+		this.cliename = cliename;
+		this.clieshortname = clieshortname;
+		this.cliprincipal = cliprincipal;
+		this.clilinkman = clilinkman;
+		this.cliphoneone = cliphoneone;
+		this.cliphonetwo = cliphonetwo;
+		this.cliphonethree = cliphonethree;
+		this.clibankaccounts = clibankaccounts;
+		this.cliopenbank = cliopenbank;
+		this.clidouble = clidouble;
+		this.clicategory = clicategory;
+		this.cliempid = cliempid;
+		this.cliempname = cliempname;
+		this.climobilephone = climobilephone;
+		this.cliemail = cliemail;
+		this.cliweb = cliweb;
+		this.clifaxes = clifaxes;
+		this.clioldoutdate = clioldoutdate;
+		this.clioldodate = clioldodate;
+		this.clinewoutdate = clinewoutdate;
+		this.clinewodate = clinewodate;
+		this.clidiscount = clidiscount;
+		this.clipricestep = clipricestep;
+		this.clicreatedate = clicreatedate;
+		this.cliunitprice = cliunitprice;
+		this.clicustomerdouble = clicustomerdouble;
+		this.cliaappoment = cliaappoment;
+		this.cliappoment = cliappoment;
+		this.clistopdate = clistopdate;
+		this.clizhangkuanedu = clizhangkuanedu;
+		this.cliremainedu = cliremainedu;
+		this.clicondition = clicondition;
+		this.climonthreckoning = climonthreckoning;
+		this.clicreditstep = clicreditstep;
+		this.cliinvoice = cliinvoice;
+		this.clireceivables = clireceivables;
+		this.cliqcpremoney = cliqcpremoney;
+		this.cliqcdealmoney = cliqcdealmoney;
+		this.cliqmpremoney = cliqmpremoney;
+		this.cliqmdealmoney = cliqmdealmoney;
+		this.cliadvancee = cliadvancee;
+		this.clicolumnoneone = clicolumnoneone;
+		this.clicolumnonetow = clicolumnonetow;
+		this.cliotherremark = cliotherremark;
+		this.address = address;
+	}
+
+	public List<Clientaddress> getAddress() {
+		return address;
+	}
+
+	public void setAddress(List<Clientaddress> address) {
+		this.address = address;
+	}
+
+	private static final long serialVersionUID = 1L;
 
     public String getCliid() {
         return cliid;

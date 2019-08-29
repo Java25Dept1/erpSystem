@@ -2,9 +2,10 @@ package com.accp.common.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
- * movestorage
+ * movestorage  调拨单主表         
  * @author 
  */
 public class Movestorage implements Serializable {
@@ -57,8 +58,53 @@ public class Movestorage implements Serializable {
      * 标识是否删除
      */
     private Integer enables;
+    
+    private List<Movedetails> details;//调拨单明细表
+    
+    
 
-    private static final long serialVersionUID = 1L;
+    public Movestorage(Date msedate, String mseoutstorage, String mseinsertstor, String mseemployee,
+			String mesauditingemp, String mesremark, String messtate, String mestrash, Integer enables,
+			List<Movedetails> details) {
+		super();
+		this.msedate = msedate;
+		this.mseoutstorage = mseoutstorage;
+		this.mseinsertstor = mseinsertstor;
+		this.mseemployee = mseemployee;
+		this.mesauditingemp = mesauditingemp;
+		this.mesremark = mesremark;
+		this.messtate = messtate;
+		this.mestrash = mestrash;
+		this.enables = enables;
+		this.details = details;
+	}
+
+	public Movestorage(String mseno, Date msedate, String mseoutstorage, String mseinsertstor, String mseemployee,
+			String mesauditingemp, String mesremark, String messtate, String mestrash, Integer enables,
+			List<Movedetails> details) {
+		super();
+		this.mseno = mseno;
+		this.msedate = msedate;
+		this.mseoutstorage = mseoutstorage;
+		this.mseinsertstor = mseinsertstor;
+		this.mseemployee = mseemployee;
+		this.mesauditingemp = mesauditingemp;
+		this.mesremark = mesremark;
+		this.messtate = messtate;
+		this.mestrash = mestrash;
+		this.enables = enables;
+		this.details = details;
+	}
+
+	public List<Movedetails> getDetails() {
+		return details;
+	}
+
+	public void setDetails(List<Movedetails> details) {
+		this.details = details;
+	}
+
+	private static final long serialVersionUID = 1L;
 
     public String getMseno() {
         return mseno;
