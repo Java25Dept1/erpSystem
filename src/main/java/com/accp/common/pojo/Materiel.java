@@ -666,6 +666,25 @@ public class Materiel implements Serializable {
 		this.matstopdate = matstopdate;
 		this.matremark = matremark;
 	}
+
+	@Override
+	public String toString() {
+		return "Materiel [matid=" + matid + ", matname=" + matname + ", matspec=" + matspec + ", mattypeid=" + mattypeid
+				+ ", mattypename=" + mattypename + ", matdityname=" + matdityname + ", matunit=" + matunit
+				+ ", matshapecode=" + matshapecode + ", matadviceprice=" + matadviceprice + ", matadvicepricea="
+				+ matadvicepricea + ", matadvicepriceb=" + matadvicepriceb + ", matadvicepricec=" + matadvicepricec
+				+ ", matadvicepriced=" + matadvicepriced + ", matadvicepricee=" + matadvicepricee
+				+ ", matstandardprice=" + matstandardprice + ", matcurrency=" + matcurrency + ", matshape=" + matshape
+				+ ", matifduty=" + matifduty + ", matcategories=" + matcategories + ", matdutyrate=" + matdutyrate
+				+ ", matstockaheaddate=" + matstockaheaddate + ", matmainafford=" + matmainafford + ", matetystock="
+				+ matetystock + ", matuantity=" + matuantity + ", matgecost=" + matgecost + ", matdardcost="
+				+ matdardcost + ", mattialcost=" + mattialcost + ", matfestock=" + matfestock + ", matravailable="
+				+ matravailable + ", mattaveragecost=" + mattaveragecost + ", matcost=" + matcost + ", mattalcost="
+				+ mattalcost + ", matldepotdate=" + matldepotdate + ", matragedate=" + matragedate + ", matepotdate="
+				+ matepotdate + ", mattoragedate=" + mattoragedate + ", matolumnone=" + matolumnone + ", matolumntow="
+				+ matolumntow + ", matmainaffordid=" + matmainaffordid + ", matgawpdate=" + matgawpdate
+				+ ", matstopdate=" + matstopdate + ", matremark=" + matremark + "]";
+	}
     
     
 }

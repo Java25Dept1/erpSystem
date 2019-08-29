@@ -79,6 +79,12 @@ public class Clienttype implements Serializable {
 		this.clitypeename = clitypeename;
 		this.cliremark = cliremark;
 	}
+
+	@Override
+	public String toString() {
+		return "Clienttype [clitypeid=" + clitypeid + ", clitypename=" + clitypename + ", clitypeename=" + clitypeename
+				+ ", cliremark=" + cliremark + "]";
+	}
     
     
 }

@@ -168,6 +168,14 @@ public class Movepricedetail implements Serializable {
 		this.movemoveprice = movemoveprice;
 		this.enables = enables;
 	}
+
+	@Override
+	public String toString() {
+		return "Movepricedetail [moveinile=" + moveinile + ", moveorderno=" + moveorderno + ", movespectype="
+				+ movespectype + ", moveunit=" + moveunit + ", movestocks=" + movestocks + ", moveaveragecost="
+				+ moveaveragecost + ", moveprice=" + moveprice + ", movemoveprice=" + movemoveprice + ", enables="
+				+ enables + "]";
+	}
     
     
 }

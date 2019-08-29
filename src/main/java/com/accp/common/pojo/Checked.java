@@ -13,7 +13,15 @@ public class Checked implements Serializable {
      */
     private String cheid;
 
-    /**
+    @Override
+	public String toString() {
+		return "Checked [cheid=" + cheid + ", chestorageno=" + chestorageno + ", chestoragename=" + chestoragename
+				+ ", chedate=" + chedate + ", cheman=" + cheman + ", chedeptname=" + chedeptname + ", cherestrictman="
+				+ cherestrictman + ", cheauditingman=" + cheauditingman + ", chestatu=" + chestatu + ", enables="
+				+ enables + "]";
+	}
+
+	/**
      * 盘点的仓库编号Storage(stoid)
      */
     private String chestorageno;

@@ -435,6 +435,18 @@ public class Stockorderdetails implements Serializable {
 		this.extend3 = extend3;
 		this.extend4 = extend4;
 	}
+
+	@Override
+	public String toString() {
+		return "Stockorderdetails [sodid=" + sodid + ", sodlineid=" + sodlineid + ", sodmaterielid=" + sodmaterielid
+				+ ", sodmatid=" + sodmatid + ", sodspec=" + sodspec + ", sodamount=" + sodamount + ", sodpreprice="
+				+ sodpreprice + ", sodagio=" + sodagio + ", sodprice=" + sodprice + ", sodsum=" + sodsum + ", sodcess="
+				+ sodcess + ", sodsumcess=" + sodsumcess + ", sodsumprice=" + sodsumprice + ", sodpreincomestorage="
+				+ sodpreincomestorage + ", sodpresent=" + sodpresent + ", sodorigintype=" + sodorigintype
+				+ ", sodorigin=" + sodorigin + ", enables=" + enables + ", safetyone=" + safetyone + ", safetytwo="
+				+ safetytwo + ", extend0=" + extend0 + ", extend1=" + extend1 + ", extend2=" + extend2 + ", extend3="
+				+ extend3 + ", extend4=" + extend4 + "]";
+	}
     
     
 }

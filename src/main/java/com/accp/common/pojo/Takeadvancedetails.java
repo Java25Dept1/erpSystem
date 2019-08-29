@@ -218,6 +218,14 @@ public class Takeadvancedetails implements Serializable {
 		this.safetyone = safetyone;
 		this.safetytwo = safetytwo;
 	}
+
+	@Override
+	public String toString() {
+		return "Takeadvancedetails [payid=" + payid + ", takid=" + takid + ", advid=" + advid + ", advdetid=" + advdetid
+				+ ", paybalance=" + paybalance + ", takadvmoney=" + takadvmoney + ", paydeptid=" + paydeptid
+				+ ", paydeptname=" + paydeptname + ", fromdiscription=" + fromdiscription + ", enables=" + enables
+				+ ", safetyone=" + safetyone + ", safetytwo=" + safetytwo + "]";
+	}
     
     
 }

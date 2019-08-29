@@ -79,6 +79,12 @@ public class Otherwarehousing implements Serializable {
 		this.owaengname = owaengname;
 		this.owamale = owamale;
 	}
+
+	@Override
+	public String toString() {
+		return "Otherwarehousing [owaid=" + owaid + ", owaname=" + owaname + ", owaengname=" + owaengname + ", owamale="
+				+ owamale + "]";
+	}
     
     
 }

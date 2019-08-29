@@ -351,6 +351,17 @@ public class Paymentdetails implements Serializable {
 		this.safetyone = safetyone;
 		this.safetytwo = safetytwo;
 	}
+
+	@Override
+	public String toString() {
+		return "Paymentdetails [payid=" + payid + ", paydetid=" + paydetid + ", psourcedate=" + psourcedate
+				+ ", paydetoddtype=" + paydetoddtype + ", paydetoddid=" + paydetoddid + ", dealobjectid=" + dealobjectid
+				+ ", dealobjectname=" + dealobjectname + ", paydeptid=" + paydeptid + ", paydeptname=" + paydeptname
+				+ ", stoperson=" + stoperson + ", adcurrency=" + adcurrency + ", exchangerate=" + exchangerate
+				+ ", formeroddmoney=" + formeroddmoney + ", ncebalance=" + ncebalance + ", payzr=" + payzr
+				+ ", paydetmoney=" + paydetmoney + ", rushmoney=" + rushmoney + ", enables=" + enables + ", safetyone="
+				+ safetyone + ", safetytwo=" + safetytwo + "]";
+	}
     
     
 }

@@ -79,6 +79,12 @@ public class Returngoods implements Serializable {
 		this.retengname = retengname;
 		this.retmale = retmale;
 	}
+
+	@Override
+	public String toString() {
+		return "Returngoods [retid=" + retid + ", retname=" + retname + ", retengname=" + retengname + ", retmale="
+				+ retmale + "]";
+	}
     
     
 }

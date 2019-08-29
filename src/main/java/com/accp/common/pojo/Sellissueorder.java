@@ -434,6 +434,18 @@ public class Sellissueorder implements Serializable {
 		this.saleclassid = saleclassid;
 		this.saleclassname = saleclassname;
 	}
+
+	@Override
+	public String toString() {
+		return "Sellissueorder [billid=" + billid + ", billdate=" + billdate + ", sinid=" + sinid + ", sinname="
+				+ sinname + ", cliid=" + cliid + ", clishortname=" + clishortname + ", cliplaceid=" + cliplaceid
+				+ ", cliplace=" + cliplace + ", effectdate=" + effectdate + ", currencytype=" + currencytype
+				+ ", pricewhethertax=" + pricewhethertax + ", stoid=" + stoid + ", stoname=" + stoname + ", empid="
+				+ empid + ", empname=" + empname + ", depid=" + depid + ", depname=" + depname + ", makeempname="
+				+ makeempname + ", auditingempname=" + auditingempname + ", checkstate=" + checkstate + ", remark="
+				+ remark + ", totalmoney=" + totalmoney + ", totaltax=" + totaltax + ", totaltaxmoney=" + totaltaxmoney
+				+ ", enables=" + enables + ", saleclassid=" + saleclassid + ", saleclassname=" + saleclassname + "]";
+	}
     
     
 }

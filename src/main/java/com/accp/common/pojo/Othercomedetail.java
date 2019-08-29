@@ -203,6 +203,14 @@ public class Othercomedetail implements Serializable {
 		this.othmoney = othmoney;
 		this.othph = othph;
 	}
+
+	@Override
+	public String toString() {
+		return "Othercomedetail [othcomeid=" + othcomeid + ", othcomeno=" + othcomeno + ", othcomemertialsid="
+				+ othcomemertialsid + ", othcomemertialname=" + othcomemertialname + ", othcometypes=" + othcometypes
+				+ ", othcomeunits=" + othcomeunits + ", othcomeamount=" + othcomeamount + ", othcomeremark="
+				+ othcomeremark + ", othprice=" + othprice + ", othmoney=" + othmoney + ", othph=" + othph + "]";
+	}
     
     
 }

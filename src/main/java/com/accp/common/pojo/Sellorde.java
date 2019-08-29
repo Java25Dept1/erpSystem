@@ -356,6 +356,17 @@ public class Sellorde implements Serializable {
 		this.totaltax = totaltax;
 		this.totaltaxmoney = totaltaxmoney;
 	}
+
+	@Override
+	public String toString() {
+		return "Sellorde [seid=" + seid + ", secustomername=" + secustomername + ", seaddress=" + seaddress
+				+ ", seaddresstwo=" + seaddresstwo + ", setype=" + setype + ", setax=" + setax + ", sestatus="
+				+ sestatus + ", sedate=" + sedate + ", senumber=" + senumber + ", seorder=" + seorder + ", securrency="
+				+ securrency + ", separities=" + separities + ", empid=" + empid + ", empname=" + empname + ", depid="
+				+ depid + ", depname=" + depname + ", makeempname=" + makeempname + ", auditingempname="
+				+ auditingempname + ", checkstate=" + checkstate + ", totalmoney=" + totalmoney + ", totaltax="
+				+ totaltax + ", totaltaxmoney=" + totaltaxmoney + "]";
+	}
     
     
 }

@@ -315,6 +315,15 @@ public class Saleobey implements Serializable {
 		this.factcost = factcost;
 		this.criterioncost = criterioncost;
 	}
+
+	@Override
+	public String toString() {
+		return "Saleobey [sono=" + sono + ", soid=" + soid + ", sowlid=" + sowlid + ", sowlname=" + sowlname
+				+ ", sotype=" + sotype + ", sodwname=" + sodwname + ", sonumber=" + sonumber + ", sozkprice="
+				+ sozkprice + ", sozs=" + sozs + ", soprice=" + soprice + ", somoney=" + somoney + ", sosl=" + sosl
+				+ ", sopaid=" + sopaid + ", soamount=" + soamount + ", sozp=" + sozp + ", soremark=" + soremark
+				+ ", factcost=" + factcost + ", criterioncost=" + criterioncost + "]";
+	}
     
     
 }

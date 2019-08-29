@@ -181,6 +181,14 @@ public class Advancedetails {
 		this.safetyone = safetyone;
 		this.safetytwo = safetytwo;
 	}
+
+	@Override
+	public String toString() {
+		return "Advancedetails [advid=" + advid + ", advdetid=" + advdetid + ", advdetmoney=" + advdetmoney
+				+ ", advdetoddtype=" + advdetoddtype + ", advdetoddid=" + advdetoddid + ", advdetdegest=" + advdetdegest
+				+ ", advdetbalance=" + advdetbalance + ", enables=" + enables + ", safetyone=" + safetyone
+				+ ", safetytwo=" + safetytwo + "]";
+	}
 	
 	
 

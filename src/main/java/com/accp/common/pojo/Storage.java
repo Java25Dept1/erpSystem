@@ -156,6 +156,13 @@ public class Storage implements Serializable {
 		this.stoaddress = stoaddress;
 		this.storemark = storemark;
 	}
+
+	@Override
+	public String toString() {
+		return "Storage [stoid=" + stoid + ", stoname=" + stoname + ", stosimplename=" + stosimplename + ", stoengname="
+				+ stoengname + ", stoconnectper=" + stoconnectper + ", stoempid=" + stoempid + ", stophone=" + stophone
+				+ ", stoaddress=" + stoaddress + ", storemark=" + storemark + "]";
+	}
     
     
 }

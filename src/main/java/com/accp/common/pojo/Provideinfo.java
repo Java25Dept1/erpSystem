@@ -728,6 +728,27 @@ public class Provideinfo implements Serializable {
 		this.peocustombartow = peocustombartow;
 		this.peoremark = peoremark;
 	}
+
+	@Override
+	public String toString() {
+		return "Provideinfo [peoid=" + peoid + ", peoname=" + peoname + ", peoshortname=" + peoshortname
+				+ ", peoabbreviation=" + peoabbreviation + ", peofullname=" + peofullname + ", peoascription="
+				+ peoascription + ", peopeeid=" + peopeeid + ", peopeename=" + peopeename + ", peoarea=" + peoarea
+				+ ", peocurrency=" + peocurrency + ", peoprincipal=" + peoprincipal + ", peolinkman=" + peolinkman
+				+ ", peophoneone=" + peophoneone + ", peophonetwo=" + peophonetwo + ", peophonethree=" + peophonethree
+				+ ", peomobilephone=" + peomobilephone + ", peobankaccounts=" + peobankaccounts + ", peoopenbank="
+				+ peoopenbank + ", peopersonnel=" + peopersonnel + ", peoregistration=" + peoregistration
+				+ ", peocalling=" + peocalling + ", peoemail=" + peoemail + ", peoweb=" + peoweb + ", peofaxes="
+				+ peofaxes + ", peoldoutdate=" + peoldoutdate + ", peoldodate=" + peoldodate + ", peonewoutdate="
+				+ peonewoutdate + ", peonewodate=" + peonewodate + ", peoincluded=" + peoincluded + ", peoterminadate="
+				+ peoterminadate + ", peozhangkuanedu=" + peozhangkuanedu + ", peoremainedu=" + peoremainedu
+				+ ", peopayment=" + peopayment + ", peomonthreckoning=" + peomonthreckoning + ", peocreditrating="
+				+ peocreditrating + ", peoinvoicetype=" + peoinvoicetype + ", peoqcprepaymoney=" + peoqcprepaymoney
+				+ ", peoqcdealmoney=" + peoqcdealmoney + ", peoqmprepaymoney=" + peoqmprepaymoney + ", peoqmdealmoney="
+				+ peoqmdealmoney + ", peoadvance=" + peoadvance + ", peoaccounts=" + peoaccounts + ", peoassessed="
+				+ peoassessed + ", peocustombarone=" + peocustombarone + ", peocustombartow=" + peocustombartow
+				+ ", peoremark=" + peoremark + "]";
+	}
     
     
 }

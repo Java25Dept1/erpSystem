@@ -390,6 +390,17 @@ public class Advance implements Serializable {
 		this.isaditing = isaditing;
 		this.enables = enables;
 	}
+
+	@Override
+	public String toString() {
+		return "Advance [advid=" + advid + ", advdate=" + advdate + ", purveyid=" + purveyid + ", purveyname="
+				+ purveyname + ", advstrike1=" + advstrike1 + ", advstrike2=" + advstrike2 + ", advstrike3="
+				+ advstrike3 + ", advmoney1=" + advmoney1 + ", advmoney2=" + advmoney2 + ", advmoney3=" + advmoney3
+				+ ", advcurrencytype=" + advcurrencytype + ", exchangerate=" + exchangerate + ", advmakeing="
+				+ advmakeing + ", stodept=" + stodept + ", stodeptid=" + stodeptid + ", advcheckman=" + advcheckman
+				+ ", advremark=" + advremark + ", isaditing=" + isaditing + ", enables=" + enables + ", safetyone="
+				+ safetyone + ", safetytwo=" + safetytwo + "]";
+	}
     
     
 }

@@ -79,6 +79,12 @@ public class Otherreceipts implements Serializable {
 		this.oreengname = oreengname;
 		this.oremale = oremale;
 	}
+
+	@Override
+	public String toString() {
+		return "Otherreceipts [oreid=" + oreid + ", orename=" + orename + ", oreengname=" + oreengname + ", oremale="
+				+ oremale + "]";
+	}
     
     
 }

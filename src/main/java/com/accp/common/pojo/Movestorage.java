@@ -139,4 +139,46 @@ public class Movestorage implements Serializable {
     public void setEnables(Integer enables) {
         this.enables = enables;
     }
+
+	@Override
+	public String toString() {
+		return "Movestorage [mseno=" + mseno + ", msedate=" + msedate + ", mseoutstorage=" + mseoutstorage
+				+ ", mseinsertstor=" + mseinsertstor + ", mseemployee=" + mseemployee + ", mesauditingemp="
+				+ mesauditingemp + ", mesremark=" + mesremark + ", messtate=" + messtate + ", mestrash=" + mestrash
+				+ ", enables=" + enables + "]";
+	}
+
+	public Movestorage(String mseno, Date msedate, String mseoutstorage, String mseinsertstor, String mseemployee,
+			String mesauditingemp, String mesremark, String messtate, String mestrash, Integer enables) {
+		super();
+		this.mseno = mseno;
+		this.msedate = msedate;
+		this.mseoutstorage = mseoutstorage;
+		this.mseinsertstor = mseinsertstor;
+		this.mseemployee = mseemployee;
+		this.mesauditingemp = mesauditingemp;
+		this.mesremark = mesremark;
+		this.messtate = messtate;
+		this.mestrash = mestrash;
+		this.enables = enables;
+	}
+
+	public Movestorage() {
+		super();
+	}
+
+	public Movestorage(Date msedate, String mseoutstorage, String mseinsertstor, String mseemployee,
+			String mesauditingemp, String mesremark, String messtate, String mestrash, Integer enables) {
+		super();
+		this.msedate = msedate;
+		this.mseoutstorage = mseoutstorage;
+		this.mseinsertstor = mseinsertstor;
+		this.mseemployee = mseemployee;
+		this.mesauditingemp = mesauditingemp;
+		this.mesremark = mesremark;
+		this.messtate = messtate;
+		this.mestrash = mestrash;
+		this.enables = enables;
+	}
+    
 }

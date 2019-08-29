@@ -172,6 +172,14 @@ public class Materieltype implements Serializable {
 		this.matexpensid = matexpensid;
 		this.matcostid = matcostid;
 	}
+
+	@Override
+	public String toString() {
+		return "Materieltype [matypeid=" + matypeid + ", matypename=" + matypename + ", matypeengname=" + matypeengname
+				+ ", matyperemark=" + matyperemark + ", mataccsaleid=" + mataccsaleid + ", matacccostid=" + matacccostid
+				+ ", matexpenseid=" + matexpenseid + ", matincomeid=" + matincomeid + ", matexpensid=" + matexpensid
+				+ ", matcostid=" + matcostid + "]";
+	}
     
     
 }

@@ -401,6 +401,17 @@ public class Recededetails implements Serializable {
 		this.extend3 = extend3;
 		this.extend4 = extend4;
 	}
+
+	@Override
+	public String toString() {
+		return "Recededetails [recid=" + recid + ", detsequ=" + detsequ + ", matid=" + matid + ", matname=" + matname
+				+ ", matspec=" + matspec + ", detnum=" + detnum + ", detagioprice=" + detagioprice + ", detdiscount="
+				+ detdiscount + ", detprice=" + detprice + ", detamtmoney=" + detamtmoney + ", depcess=" + depcess
+				+ ", depcessmoney=" + depcessmoney + ", deplargess=" + deplargess + ", sodorigintype=" + sodorigintype
+				+ ", sodorigin=" + sodorigin + ", enables=" + enables + ", safetyone=" + safetyone + ", safetytwo="
+				+ safetytwo + ", extend0=" + extend0 + ", extend1=" + extend1 + ", extend2=" + extend2 + ", extend3="
+				+ extend3 + ", extend4=" + extend4 + "]";
+	}
     
     
 }

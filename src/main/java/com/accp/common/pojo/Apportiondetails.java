@@ -169,6 +169,14 @@ public class Apportiondetails implements Serializable {
 		this.safetyone = safetyone;
 		this.safetytwo = safetytwo;
 	}
+
+	@Override
+	public String toString() {
+		return "Apportiondetails [adeid=" + adeid + ", adesequ=" + adesequ + ", adeexesid=" + adeexesid
+				+ ", adeexesname=" + adeexesname + ", adeamtmoney=" + adeamtmoney + ", adcurrency=" + adcurrency
+				+ ", adstandardcurrency=" + adstandardcurrency + ", enables=" + enables + ", safetyone=" + safetyone
+				+ ", safetytwo=" + safetytwo + "]";
+	}
     
     
 }

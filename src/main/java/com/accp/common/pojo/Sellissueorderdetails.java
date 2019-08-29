@@ -350,6 +350,16 @@ public class Sellissueorderdetails implements Serializable {
 		this.originbillid = originbillid;
 		this.enables = enables;
 	}
+
+	@Override
+	public String toString() {
+		return "Sellissueorderdetails [billid=" + billid + ", cotemark=" + cotemark + ", matid=" + matid + ", matname="
+				+ matname + ", matspec=" + matspec + ", matunit=" + matunit + ", num=" + num + ", agioagoprice="
+				+ agioagoprice + ", agio=" + agio + ", price=" + price + ", money=" + money + ", cess=" + cess
+				+ ", taxmoney=" + taxmoney + ", intaxmoney=" + intaxmoney + ", present=" + present + ", factcost="
+				+ factcost + ", criterioncost=" + criterioncost + ", sinname=" + sinname + ", originbillid="
+				+ originbillid + ", enables=" + enables + "]";
+	}
     
     
 }

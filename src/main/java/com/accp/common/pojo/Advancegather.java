@@ -358,6 +358,17 @@ public class Advancegather implements Serializable {
 		this.safetyone = safetyone;
 		this.safetytwo = safetytwo;
 	}
+
+	@Override
+	public String toString() {
+		return "Advancegather [adcid=" + adcid + ", adcdate=" + adcdate + ", purveyid=" + purveyid + ", purveyname="
+				+ purveyname + ", adcstrike1=" + adcstrike1 + ", adcstrike2=" + adcstrike2 + ", adcstrike3="
+				+ adcstrike3 + ", adcmoney1=" + adcmoney1 + ", adcmoney2=" + adcmoney2 + ", adcmoney3=" + adcmoney3
+				+ ", advcurrencytype=" + advcurrencytype + ", exchangerate=" + exchangerate + ", adcmakeing="
+				+ adcmakeing + ", stodept=" + stodept + ", stodeptid=" + stodeptid + ", adccheckman=" + adccheckman
+				+ ", adcremark=" + adcremark + ", isaditing=" + isaditing + ", checkstate=" + checkstate + ", enables="
+				+ enables + ", safetyone=" + safetyone + ", safetytwo=" + safetytwo + "]";
+	}
     
     
 }

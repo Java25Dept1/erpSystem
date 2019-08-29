@@ -273,6 +273,14 @@ public class Accountmoneydetail implements Serializable {
 		this.originalmoney = originalmoney;
 		this.nwadaysmoneys = nwadaysmoneys;
 	}
+
+	@Override
+	public String toString() {
+		return "Accountmoneydetail [storageid=" + storageid + ", storagedate=" + storagedate + ", origintypes="
+				+ origintypes + ", originid=" + originid + ", nwdate=" + nwdate + ", clientsupply=" + clientsupply
+				+ ", citationid=" + citationid + ", originalmoney=" + originalmoney + ", nwadaysmoneys=" + nwadaysmoneys
+				+ ", enables=" + enables + ", safetytone=" + safetytone + ", safetytwo=" + safetytwo + "]";
+	}
     
     
     

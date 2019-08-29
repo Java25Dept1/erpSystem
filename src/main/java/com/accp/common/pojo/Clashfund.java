@@ -311,6 +311,16 @@ public class Clashfund implements Serializable {
 		this.safetyone = safetyone;
 		this.safetytwo = safetytwo;
 	}
+
+	@Override
+	public String toString() {
+		return "Clashfund [cfid=" + cfid + ", cfdate=" + cfdate + ", purveyid=" + purveyid + ", purveyname="
+				+ purveyname + ", cfstrike1=" + cfstrike1 + ", cfstrike2=" + cfstrike2 + ", cfstrike3=" + cfstrike3
+				+ ", cfmoney1=" + cfmoney1 + ", cfmoney2=" + cfmoney2 + ", cfmoney3=" + cfmoney3 + ", cfmakeing="
+				+ cfmakeing + ", cfdept=" + cfdept + ", stodeptid=" + stodeptid + ", cfcheckman=" + cfcheckman
+				+ ", cfremark=" + cfremark + ", isaditing=" + isaditing + ", enables=" + enables + ", safetyone="
+				+ safetyone + ", safetytwo=" + safetytwo + "]";
+	}
     
     
 }

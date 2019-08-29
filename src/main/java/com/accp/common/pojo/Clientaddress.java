@@ -172,6 +172,14 @@ public class Clientaddress implements Serializable {
 		this.climemo = climemo;
 		this.cliid = cliid;
 	}
+
+	@Override
+	public String toString() {
+		return "Clientaddress [cliaddrid=" + cliaddrid + ", cliaddress=" + cliaddress + ", clizipcode=" + clizipcode
+				+ ", clilinkman=" + clilinkman + ", clilinkmanprof=" + clilinkmanprof + ", clitelephone=" + clitelephone
+				+ ", clifaxno=" + clifaxno + ", cliwalkaddr=" + cliwalkaddr + ", climemo=" + climemo + ", cliid="
+				+ cliid + "]";
+	}
     
     
 }

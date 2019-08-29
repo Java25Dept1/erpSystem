@@ -268,6 +268,15 @@ public class Minusandadddetail implements Serializable {
 		this.aftermath = aftermath;
 		this.enables = enables;
 	}
+
+	@Override
+	public String toString() {
+		return "Minusandadddetail [minusaddid=" + minusaddid + ", minusdate=" + minusdate + ", matypeid=" + matypeid
+				+ ", matypename=" + matypename + ", minusadd=" + minusadd + ", minusremove=" + minusremove
+				+ ", unitprice=" + unitprice + ", moneys=" + moneys + ", storagedate=" + storagedate + ", stoid="
+				+ stoid + ", stoname=" + stoname + ", origintype=" + origintype + ", originid=" + originid
+				+ ", aftermath=" + aftermath + ", enables=" + enables + "]";
+	}
     
     
 }

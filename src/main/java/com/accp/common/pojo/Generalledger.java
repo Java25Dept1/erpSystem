@@ -302,6 +302,17 @@ public class Generalledger implements Serializable {
 		this.safetytwo = safetytwo;
 		this.enables = enables;
 	}
+
+	@Override
+	public String toString() {
+		return "Generalledger [genid=" + genid + ", genmaterielid=" + genmaterielid + ", genstorageno=" + genstorageno
+				+ ", genstoragename=" + genstoragename + ", genexpectstartqty=" + genexpectstartqty
+				+ ", genstandarcost=" + genstandarcost + ", genallcost=" + genallcost + ", genexpectstartallcost="
+				+ genexpectstartallcost + ", gensafetyqty=" + gensafetyqty + ", genavgcost=" + genavgcost + ", genqty="
+				+ genqty + ", gennowavgcost=" + gennowavgcost + ", genstandardcostall=" + genstandardcostall
+				+ ", gennowcost=" + gennowcost + ", safetyone=" + safetyone + ", safetytwo=" + safetytwo + ", enables="
+				+ enables + "]";
+	}
     
     
 }

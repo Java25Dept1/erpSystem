@@ -171,6 +171,14 @@ public class Supplieraddress implements Serializable {
 		this.sumemo = sumemo;
 		this.peoid = peoid;
 	}
+
+	@Override
+	public String toString() {
+		return "Supplieraddress [suaddrid=" + suaddrid + ", suaddress=" + suaddress + ", suzipcode=" + suzipcode
+				+ ", sulinkman=" + sulinkman + ", sulinkmanprof=" + sulinkmanprof + ", sutelephone=" + sutelephone
+				+ ", sufaxno=" + sufaxno + ", suwalkaddr=" + suwalkaddr + ", sumemo=" + sumemo + ", peoid=" + peoid
+				+ "]";
+	}
     
     
 }

@@ -805,6 +805,28 @@ public class Client implements Serializable {
 		this.clicolumnonetow = clicolumnonetow;
 		this.cliotherremark = cliotherremark;
 	}
+
+	@Override
+	public String toString() {
+		return "Client [cliid=" + cliid + ", clitypeid=" + clitypeid + ", cliaccounts=" + cliaccounts + ", cliname="
+				+ cliname + ", clishortname=" + clishortname + ", cliaddress=" + cliaddress + ", cliarea=" + cliarea
+				+ ", cliename=" + cliename + ", clieshortname=" + clieshortname + ", cliprincipal=" + cliprincipal
+				+ ", clilinkman=" + clilinkman + ", cliphoneone=" + cliphoneone + ", cliphonetwo=" + cliphonetwo
+				+ ", cliphonethree=" + cliphonethree + ", clibankaccounts=" + clibankaccounts + ", cliopenbank="
+				+ cliopenbank + ", clidouble=" + clidouble + ", clicategory=" + clicategory + ", cliempid=" + cliempid
+				+ ", cliempname=" + cliempname + ", climobilephone=" + climobilephone + ", cliemail=" + cliemail
+				+ ", cliweb=" + cliweb + ", clifaxes=" + clifaxes + ", clioldoutdate=" + clioldoutdate
+				+ ", clioldodate=" + clioldodate + ", clinewoutdate=" + clinewoutdate + ", clinewodate=" + clinewodate
+				+ ", clidiscount=" + clidiscount + ", clipricestep=" + clipricestep + ", clicreatedate=" + clicreatedate
+				+ ", cliunitprice=" + cliunitprice + ", clicustomerdouble=" + clicustomerdouble + ", cliaappoment="
+				+ cliaappoment + ", cliappoment=" + cliappoment + ", clistopdate=" + clistopdate + ", clizhangkuanedu="
+				+ clizhangkuanedu + ", cliremainedu=" + cliremainedu + ", clicondition=" + clicondition
+				+ ", climonthreckoning=" + climonthreckoning + ", clicreditstep=" + clicreditstep + ", cliinvoice="
+				+ cliinvoice + ", clireceivables=" + clireceivables + ", cliqcpremoney=" + cliqcpremoney
+				+ ", cliqcdealmoney=" + cliqcdealmoney + ", cliqmpremoney=" + cliqmpremoney + ", cliqmdealmoney="
+				+ cliqmdealmoney + ", cliadvancee=" + cliadvancee + ", clicolumnoneone=" + clicolumnoneone
+				+ ", clicolumnonetow=" + clicolumnonetow + ", cliotherremark=" + cliotherremark + "]";
+	}
     
     
 }

@@ -334,6 +334,16 @@ public class Selectpaper implements Serializable {
 		this.originbillid = originbillid;
 		this.enables = enables;
 	}
+
+	@Override
+	public String toString() {
+		return "Selectpaper [billid=" + billid + ", cotemark=" + cotemark + ", matid=" + matid + ", matname=" + matname
+				+ ", matspec=" + matspec + ", matunit=" + matunit + ", number=" + number + ", agioagoprice="
+				+ agioagoprice + ", agio=" + agio + ", price=" + price + ", money=" + money + ", cess=" + cess
+				+ ", taxmoney=" + taxmoney + ", intaxmoney=" + intaxmoney + ", factcost=" + factcost
+				+ ", criterioncost=" + criterioncost + ", nonumber=" + nonumber + ", originbillid=" + originbillid
+				+ ", enables=" + enables + "]";
+	}
     
     
 }

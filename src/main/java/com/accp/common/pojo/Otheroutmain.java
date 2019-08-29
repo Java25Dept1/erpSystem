@@ -172,6 +172,14 @@ public class Otheroutmain implements Serializable {
 		this.othidno = othidno;
 		this.othbzid = othbzid;
 	}
+
+	@Override
+	public String toString() {
+		return "Otheroutmain [othid=" + othid + ", othdate=" + othdate + ", othouttypeid=" + othouttypeid
+				+ ", othstore=" + othstore + ", othoutname=" + othoutname + ", othdept=" + othdept + ", othmakemanid="
+				+ othmakemanid + ", othrepeatuserid=" + othrepeatuserid + ", othidno=" + othidno + ", othbzid="
+				+ othbzid + "]";
+	}
     
     
 }

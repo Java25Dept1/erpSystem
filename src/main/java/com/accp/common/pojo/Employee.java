@@ -974,6 +974,32 @@ public class Employee implements Serializable {
 		this.custombarsex = custombarsex;
 		this.empremark = empremark;
 	}
+
+	@Override
+	public String toString() {
+		return "Employee [empid=" + empid + ", empname=" + empname + ", empename=" + empename + ", depid=" + depid
+				+ ", empsex=" + empsex + ", empcard=" + empcard + ", empstate=" + empstate + ", calid=" + calid
+				+ ", empbirthday=" + empbirthday + ", empphoneone=" + empphoneone + ", empphonetwo=" + empphonetwo
+				+ ", empphonethree=" + empphonethree + ", bloodtype=" + bloodtype + ", empbirtbday=" + empbirtbday
+				+ ", empjob=" + empjob + ", empemail=" + empemail + ", technicalpositin=" + technicalpositin
+				+ ", chineseposts=" + chineseposts + ", englishposts=" + englishposts + ", contactzipcode="
+				+ contactzipcode + ", contactdouble=" + contactdouble + ", contactaddress=" + contactaddress
+				+ ", mobilephone=" + mobilephone + ", nation=" + nation + ", post=" + post + ", nationality="
+				+ nationality + ", salaryscheme=" + salaryscheme + ", transmissionscheme=" + transmissionscheme
+				+ ", taxdeductionmethod=" + taxdeductionmethod + ", emptop=" + emptop + ", empdegree=" + empdegree
+				+ ", empgotime=" + empgotime + ", empgraduatetime=" + empgraduatetime + ", emppactstarttime="
+				+ emppactstarttime + ", emppactendtime=" + emppactendtime + ", majorofstudy=" + majorofstudy
+				+ ", proficiency=" + proficiency + ", examinationdate=" + examinationdate + ", ofentrydate="
+				+ ofentrydate + ", passportdouble=" + passportdouble + ", contractperiod=" + contractperiod
+				+ ", myempemail=" + myempemail + ", householdtelephone=" + householdtelephone + ", empnowmailid="
+				+ empnowmailid + ", householdemail=" + householdemail + ", householdaddress=" + householdaddress
+				+ ", empfamilyphone=" + empfamilyphone + ", empfamilyplace=" + empfamilyplace + ", empnowphone="
+				+ empnowphone + ", empnowplace=" + empnowplace + ", empexigenceman=" + empexigenceman + ", empexphone="
+				+ empexphone + ", empexemail=" + empexemail + ", empexaddress=" + empexaddress + ", empfamilymailid="
+				+ empfamilymailid + ", custombarone=" + custombarone + ", custombartow=" + custombartow
+				+ ", custombarthree=" + custombarthree + ", custombarfour=" + custombarfour + ", custombarfilw="
+				+ custombarfilw + ", custombarsex=" + custombarsex + ", empremark=" + empremark + "]";
+	}
     
     
 }

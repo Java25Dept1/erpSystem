@@ -79,6 +79,12 @@ public class Purchasingorder implements Serializable {
 		this.purengname = purengname;
 		this.purmale = purmale;
 	}
+
+	@Override
+	public String toString() {
+		return "Purchasingorder [purid=" + purid + ", purname=" + purname + ", purengname=" + purengname + ", purmale="
+				+ purmale + "]";
+	}
     
     
 }

@@ -125,6 +125,12 @@ public class Depttab implements Serializable {
 		this.calid = calid;
 		this.depremark = depremark;
 	}
+
+	@Override
+	public String toString() {
+		return "Depttab [depid=" + depid + ", depname=" + depname + ", engname=" + engname + ", male=" + male
+				+ ", salyarytypeid=" + salyarytypeid + ", calid=" + calid + ", depremark=" + depremark + "]";
+	}
     
     
 }

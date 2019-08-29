@@ -79,6 +79,12 @@ public class Salesstock implements Serializable {
 		this.stoengname = stoengname;
 		this.stomale = stomale;
 	}
+
+	@Override
+	public String toString() {
+		return "Salesstock [stoid=" + stoid + ", stoname=" + stoname + ", stoengname=" + stoengname + ", stomale="
+				+ stomale + "]";
+	}
     
     
 }

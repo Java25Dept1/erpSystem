@@ -341,6 +341,17 @@ public class Sale implements Serializable {
 		this.totaltax = totaltax;
 		this.totaltaxmoney = totaltaxmoney;
 	}
+
+	@Override
+	public String toString() {
+		return "Sale [smid=" + smid + ", smcustomername=" + smcustomername + ", smaddress=" + smaddress
+				+ ", smaddresstwo=" + smaddresstwo + ", smtax=" + smtax + ", smdate=" + smdate + ", smnumber="
+				+ smnumber + ", smcurrency=" + smcurrency + ", smparities=" + smparities + ", cliid=" + cliid
+				+ ", smtype=" + smtype + ", empid=" + empid + ", empname=" + empname + ", depid=" + depid + ", depname="
+				+ depname + ", makeempname=" + makeempname + ", auditingempname=" + auditingempname + ", checkstate="
+				+ checkstate + ", totalmoney=" + totalmoney + ", totaltax=" + totaltax + ", totaltaxmoney="
+				+ totaltaxmoney + "]";
+	}
     
     
 }

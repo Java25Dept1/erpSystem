@@ -79,6 +79,12 @@ public class Measurement implements Serializable {
 		this.unitengname = unitengname;
 		this.unitremark = unitremark;
 	}
+
+	@Override
+	public String toString() {
+		return "Measurement [unitid=" + unitid + ", unitname=" + unitname + ", unitengname=" + unitengname
+				+ ", unitremark=" + unitremark + "]";
+	}
     
     
 }

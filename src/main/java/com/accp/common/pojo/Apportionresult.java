@@ -7,6 +7,14 @@ import java.io.Serializable;
  * @author 
  */
 public class Apportionresult implements Serializable {
+	@Override
+	public String toString() {
+		return "Apportionresult [atiid=" + atiid + ", atisequ=" + atisequ + ", storageid=" + storageid + ", matid="
+				+ matid + ", matname=" + matname + ", matspec=" + matspec + ", stockprice=" + stockprice + ", atinum="
+				+ atinum + ", ademoney=" + ademoney + ", enables=" + enables + ", safetyone=" + safetyone
+				+ ", safetytwo=" + safetytwo + "]";
+	}
+
 	/**
      * 采购分摊单号(采购分摊外键)
      */

@@ -351,6 +351,17 @@ public class Clashfunddetails implements Serializable {
 		this.safetyone = safetyone;
 		this.safetytwo = safetytwo;
 	}
+
+	@Override
+	public String toString() {
+		return "Clashfunddetails [cfdid=" + cfdid + ", cfddetid=" + cfddetid + ", cfdsourcedate=" + cfdsourcedate
+				+ ", cfddetoddtype=" + cfddetoddtype + ", cfddetoddid=" + cfddetoddid + ", dealobjectid=" + dealobjectid
+				+ ", dealobjectname=" + dealobjectname + ", cfddeptid=" + cfddeptid + ", cfddeptname=" + cfddeptname
+				+ ", stoperson=" + stoperson + ", cfdcurrency=" + cfdcurrency + ", exchangerate=" + exchangerate
+				+ ", formeroddmoney=" + formeroddmoney + ", ncebalance=" + ncebalance + ", cfdzr=" + cfdzr
+				+ ", cfddetmoney=" + cfddetmoney + ", rushmoney=" + rushmoney + ", enables=" + enables + ", safetyone="
+				+ safetyone + ", safetytwo=" + safetytwo + "]";
+	}
     
     
 }

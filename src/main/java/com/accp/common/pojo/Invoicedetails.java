@@ -291,6 +291,16 @@ public class Invoicedetails implements Serializable {
 		this.safetyone = safetyone;
 		this.safetytwo = safetytwo;
 	}
+
+	@Override
+	public String toString() {
+		return "Invoicedetails [storagedetailno=" + storagedetailno + ", rowno=" + rowno + ", materielid=" + materielid
+				+ ", materielname=" + materielname + ", types=" + types + ", units=" + units + ", amount=" + amount
+				+ ", rebateprice=" + rebateprice + ", rebate=" + rebate + ", unitprice=" + unitprice + ", moneys="
+				+ moneys + ", cess=" + cess + ", tax=" + tax + ", taxmoneys=" + taxmoneys + ", originno=" + originno
+				+ ", present=" + present + ", lqty=" + lqty + ", enables=" + enables + ", safetyone=" + safetyone
+				+ ", safetytwo=" + safetytwo + "]";
+	}
     
     
 }

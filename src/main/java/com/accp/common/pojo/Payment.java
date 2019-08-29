@@ -311,6 +311,16 @@ public class Payment implements Serializable {
 		this.safetyone = safetyone;
 		this.safetytwo = safetytwo;
 	}
+
+	@Override
+	public String toString() {
+		return "Payment [payid=" + payid + ", paydate=" + paydate + ", purveyid=" + purveyid + ", purveyname="
+				+ purveyname + ", paystrike1=" + paystrike1 + ", paystrike2=" + paystrike2 + ", paystrike3="
+				+ paystrike3 + ", paymoney1=" + paymoney1 + ", paymoney2=" + paymoney2 + ", paymoney3=" + paymoney3
+				+ ", paymakeing=" + paymakeing + ", paydept=" + paydept + ", stodeptid=" + stodeptid + ", paycheckman="
+				+ paycheckman + ", payremark=" + payremark + ", isaditing=" + isaditing + ", enables=" + enables
+				+ ", safetyone=" + safetyone + ", safetytwo=" + safetytwo + "]";
+	}
     
     
 }

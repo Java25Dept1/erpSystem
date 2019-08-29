@@ -79,6 +79,12 @@ public class Salesreturn implements Serializable {
 		this.sretengname = sretengname;
 		this.sretmale = sretmale;
 	}
+
+	@Override
+	public String toString() {
+		return "Salesreturn [sretid=" + sretid + ", sretname=" + sretname + ", sretengname=" + sretengname
+				+ ", sretmale=" + sretmale + "]";
+	}
     
     
 }

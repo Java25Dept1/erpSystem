@@ -219,6 +219,14 @@ public class Shouldgatheringdetails implements Serializable {
 		this.safetyone = safetyone;
 		this.safetytwo = safetytwo;
 	}
+
+	@Override
+	public String toString() {
+		return "Shouldgatheringdetails [minusaddid=" + minusaddid + ", sinid=" + sinid + ", sinname=" + sinname
+				+ ", originbillid=" + originbillid + ", nwdate=" + nwdate + ", cliid=" + cliid + ", showdate="
+				+ showdate + ", originddmoney=" + originddmoney + ", currentlybalance=" + currentlybalance + ", remark="
+				+ remark + ", enables=" + enables + ", safetyone=" + safetyone + ", safetytwo=" + safetytwo + "]";
+	}
     
     
 }

@@ -142,6 +142,13 @@ public class Othercome implements Serializable {
 		this.othcomemakemanid = othcomemakemanid;
 		this.othcomerepeatuserid = othcomerepeatuserid;
 	}
+
+	@Override
+	public String toString() {
+		return "Othercome [othcomeid=" + othcomeid + ", othcomedate=" + othcomedate + ", othcometypeid=" + othcometypeid
+				+ ", othcomestore=" + othcomestore + ", othcomename=" + othcomename + ", othcomedept=" + othcomedept
+				+ ", othcomemakemanid=" + othcomemakemanid + ", othcomerepeatuserid=" + othcomerepeatuserid + "]";
+	}
     
     
 }

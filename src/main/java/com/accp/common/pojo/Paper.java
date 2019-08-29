@@ -404,6 +404,18 @@ public class Paper implements Serializable {
 		this.totaltax = totaltax;
 		this.totaltaxmoney = totaltaxmoney;
 	}
+
+	@Override
+	public String toString() {
+		return "Paper [billid=" + billid + ", billdate=" + billdate + ", sinid=" + sinid + ", cliid=" + cliid
+				+ ", clishortname=" + clishortname + ", cliplaceid=" + cliplaceid + ", cliplace=" + cliplace
+				+ ", effectdate=" + effectdate + ", currencytype=" + currencytype + ", pricewhethertax="
+				+ pricewhethertax + ", stoid=" + stoid + ", stoname=" + stoname + ", wherecheck=" + wherecheck
+				+ ", empid=" + empid + ", empname=" + empname + ", depid=" + depid + ", depname=" + depname
+				+ ", makeempname=" + makeempname + ", auditingempname=" + auditingempname + ", checkstate=" + checkstate
+				+ ", enable=" + enable + ", remark=" + remark + ", totalmoney=" + totalmoney + ", totaltax=" + totaltax
+				+ ", totaltaxmoney=" + totaltaxmoney + "]";
+	}
     
     
 }

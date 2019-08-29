@@ -79,6 +79,12 @@ public class Salesorders implements Serializable {
 		this.salengname = salengname;
 		this.salmale = salmale;
 	}
+
+	@Override
+	public String toString() {
+		return "Salesorders [salid=" + salid + ", salname=" + salname + ", salengname=" + salengname + ", salmale="
+				+ salmale + "]";
+	}
     
     
 }

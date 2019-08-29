@@ -168,6 +168,14 @@ public class Advancegatherdetails{
 		this.safetyone = safetyone;
 		this.safetytwo = safetytwo;
 	}
+
+	@Override
+	public String toString() {
+		return "Advancegatherdetails [adcid=" + adcid + ", adcdetid=" + adcdetid + ", adcdetmoney=" + adcdetmoney
+				+ ", adcdetoddtype=" + adcdetoddtype + ", adcdetoddid=" + adcdetoddid + ", adcdetdegest=" + adcdetdegest
+				+ ", adcdetbalance=" + adcdetbalance + ", enables=" + enables + ", safetyone=" + safetyone
+				+ ", safetytwo=" + safetytwo + "]";
+	}
     
     
 }

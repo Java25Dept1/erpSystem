@@ -79,6 +79,12 @@ public class Providetype implements Serializable {
 		this.peeename = peeename;
 		this.peeremark = peeremark;
 	}
+
+	@Override
+	public String toString() {
+		return "Providetype [peeid=" + peeid + ", peename=" + peename + ", peeename=" + peeename + ", peeremark="
+				+ peeremark + "]";
+	}
     
     
 }

@@ -403,6 +403,18 @@ public class Sellcancel implements Serializable {
 		this.totaltaxmoney = totaltaxmoney;
 		this.enables = enables;
 	}
+
+	@Override
+	public String toString() {
+		return "Sellcancel [billid=" + billid + ", billdate=" + billdate + ", sinid=" + sinid + ", cliid=" + cliid
+				+ ", clishortname=" + clishortname + ", cliplaceid=" + cliplaceid + ", cliplace=" + cliplace
+				+ ", effectdate=" + effectdate + ", currencytype=" + currencytype + ", pricewhethertax="
+				+ pricewhethertax + ", stoid=" + stoid + ", stoname=" + stoname + ", whetheranewenterstorage="
+				+ whetheranewenterstorage + ", empid=" + empid + ", empname=" + empname + ", depid=" + depid
+				+ ", depname=" + depname + ", makeempname=" + makeempname + ", auditingempname=" + auditingempname
+				+ ", checkstate=" + checkstate + ", remark=" + remark + ", totalmoney=" + totalmoney + ", totaltax="
+				+ totaltax + ", totaltaxmoney=" + totaltaxmoney + ", enables=" + enables + "]";
+	}
     
     
 }

@@ -479,6 +479,20 @@ public class Stockinvoice implements Serializable {
 		this.safetytwo = safetytwo;
 		this.custflag = custflag;
 	}
+
+	@Override
+	public String toString() {
+		return "Stockinvoice [sysid=" + sysid + ", fundbillno=" + fundbillno + ", billdate=" + billdate + ", peoid="
+				+ peoid + ", purveyname=" + purveyname + ", billtype=" + billtype + ", invoice=" + invoice
+				+ ", affirmstate=" + affirmstate + ", invoiceid=" + invoiceid + ", voucherno=" + voucherno + ", currid="
+				+ currid + ", cvoucherno=" + cvoucherno + ", exchrate=" + exchrate + ", total=" + total + ", tax=" + tax
+				+ ", cashpay=" + cashpay + ", visapay=" + visapay + ", offset=" + offset + ", discount=" + discount
+				+ ", localtotal=" + localtotal + ", localtax=" + localtax + ", localcashpay=" + localcashpay
+				+ ", localvisapay=" + localvisapay + ", localoffset=" + localoffset + ", prepayday=" + prepayday
+				+ ", dueto=" + dueto + ", saleman=" + saleman + ", mark=" + mark + ", permitter=" + permitter
+				+ ", project=" + project + ", remark=" + remark + ", safetyone=" + safetyone + ", safetytwo="
+				+ safetytwo + ", custflag=" + custflag + "]";
+	}
     
     
 }

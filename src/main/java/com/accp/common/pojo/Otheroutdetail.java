@@ -168,6 +168,14 @@ public class Otheroutdetail implements Serializable {
 		this.othoutremark = othoutremark;
 		this.othph = othph;
 	}
+
+	@Override
+	public String toString() {
+		return "Otheroutdetail [otheroutid=" + otheroutid + ", othoutlineno=" + othoutlineno + ", othoutmertialsid="
+				+ othoutmertialsid + ", othoutmertialname=" + othoutmertialname + ", othouttypes=" + othouttypes
+				+ ", othoutunits=" + othoutunits + ", othoutamount=" + othoutamount + ", othoutremark=" + othoutremark
+				+ ", othph=" + othph + "]";
+	}
     
     
 }

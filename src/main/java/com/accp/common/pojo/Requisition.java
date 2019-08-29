@@ -79,6 +79,12 @@ public class Requisition implements Serializable {
 		this.reqengname = reqengname;
 		this.reqmale = reqmale;
 	}
+
+	@Override
+	public String toString() {
+		return "Requisition [reqid=" + reqid + ", reqname=" + reqname + ", reqengname=" + reqengname + ", reqmale="
+				+ reqmale + "]";
+	}
     
     
 }

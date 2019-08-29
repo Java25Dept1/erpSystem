@@ -172,6 +172,13 @@ public class Stockapportion implements Serializable {
 		this.safetyone = safetyone;
 		this.safetytwo = safetytwo;
 	}
+
+	@Override
+	public String toString() {
+		return "Stockapportion [appid=" + appid + ", appdate=" + appdate + ", wisname=" + wisname + ", appamtmoney="
+				+ appamtmoney + ", makeperson=" + makeperson + ", auditingperson=" + auditingperson + ", estate="
+				+ estate + ", enables=" + enables + ", safetyone=" + safetyone + ", safetytwo=" + safetytwo + "]";
+	}
     
     
 }

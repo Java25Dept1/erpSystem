@@ -403,6 +403,18 @@ public class Stockorder implements Serializable {
 		this.extend3 = extend3;
 		this.extend4 = extend4;
 	}
+
+	@Override
+	public String toString() {
+		return "Stockorder [stoid=" + stoid + ", stodate=" + stodate + ", stopeoname=" + stopeoname + ", stopeoid="
+				+ stopeoid + ", stopeoadress=" + stopeoadress + ", stoistax=" + stoistax + ", stostate=" + stostate
+				+ ", stoadress=" + stoadress + ", stoempstock=" + stoempstock + ", stopersonid=" + stopersonid
+				+ ", stodept=" + stodept + ", stodeptid=" + stodeptid + ", stoempname=" + stoempname + ", stoempcheck="
+				+ stoempcheck + ", stomark=" + stomark + ", checkstate=" + checkstate + ", stockordername="
+				+ stockordername + ", enables=" + enables + ", safetyone=" + safetyone + ", safetytwo=" + safetytwo
+				+ ", extend0=" + extend0 + ", extend1=" + extend1 + ", extend2=" + extend2 + ", extend3=" + extend3
+				+ ", extend4=" + extend4 + "]";
+	}
     
     
 }

@@ -334,6 +334,16 @@ public class Selectdet implements Serializable {
 		this.originbillid = originbillid;
 		this.enables = enables;
 	}
+
+	@Override
+	public String toString() {
+		return "Selectdet [billid=" + billid + ", cotemark=" + cotemark + ", matid=" + matid + ", matname=" + matname
+				+ ", matspec=" + matspec + ", matunit=" + matunit + ", number=" + number + ", agioagoprice="
+				+ agioagoprice + ", agio=" + agio + ", price=" + price + ", money=" + money + ", cess=" + cess
+				+ ", taxmoney=" + taxmoney + ", intaxmoney=" + intaxmoney + ", factcost=" + factcost
+				+ ", criterioncost=" + criterioncost + ", sinname=" + sinname + ", originbillid=" + originbillid
+				+ ", enables=" + enables + "]";
+	}
     
     
 }

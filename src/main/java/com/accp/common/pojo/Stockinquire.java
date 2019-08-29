@@ -388,6 +388,18 @@ public class Stockinquire implements Serializable {
 		this.extend3 = extend3;
 		this.extend4 = extend4;
 	}
+
+	@Override
+	public String toString() {
+		return "Stockinquire [stoid=" + stoid + ", stopname=" + stopname + ", stopid=" + stopid + ", stopaddress="
+				+ stopaddress + ", sotdate=" + sotdate + ", stoavdate=" + stoavdate + ", stoistax=" + stoistax
+				+ ", stodaddress=" + stodaddress + ", stomakeperson=" + stomakeperson + ", stoauditingperson="
+				+ stoauditingperson + ", stostockperson=" + stostockperson + ", stopersonid=" + stopersonid
+				+ ", stodept=" + stodept + ", stodeptid=" + stodeptid + ", stoauditing=" + stoauditing
+				+ ", stockinquirename=" + stockinquirename + ", enables=" + enables + ", safetyone=" + safetyone
+				+ ", safetytwo=" + safetytwo + ", extend0=" + extend0 + ", extend1=" + extend1 + ", extend2=" + extend2
+				+ ", extend3=" + extend3 + ", extend4=" + extend4 + "]";
+	}
     
     
 }

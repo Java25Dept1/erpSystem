@@ -451,6 +451,18 @@ public class Stockinquiredetails implements Serializable {
 		this.extend3 = extend3;
 		this.extend4 = extend4;
 	}
+
+	@Override
+	public String toString() {
+		return "Stockinquiredetails [stoid=" + stoid + ", sdarows=" + sdarows + ", sdamaterielid=" + sdamaterielid
+				+ ", sdamateridlname=" + sdamateridlname + ", sdamodel=" + sdamodel + ", sdaunit=" + sdaunit
+				+ ", sdanum=" + sdanum + ", sdaagioes=" + sdaagioes + ", sdaagiocess=" + sdaagiocess + ", sdaprice="
+				+ sdaprice + ", sdamoney=" + sdamoney + ", sdacess=" + sdacess + ", sdataxmoney=" + sdataxmoney
+				+ ", sdataxmoneys=" + sdataxmoneys + ", sdaislargess=" + sdaislargess + ", sdaoriginid=" + sdaoriginid
+				+ ", sdaorigintype=" + sdaorigintype + ", sdaremark=" + sdaremark + ", enables=" + enables
+				+ ", safetyone=" + safetyone + ", safetytwo=" + safetytwo + ", extend0=" + extend0 + ", extend1="
+				+ extend1 + ", extend2=" + extend2 + ", extend3=" + extend3 + ", extend4=" + extend4 + "]";
+	}
     
     
 }

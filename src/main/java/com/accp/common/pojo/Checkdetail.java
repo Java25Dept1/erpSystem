@@ -188,6 +188,15 @@ public class Checkdetail implements Serializable {
 		this.enables = enables;
 	}
 
+	@Override
+	public String toString() {
+		return "Checkdetail [cheid=" + cheid + ", chelineid=" + chelineid + ", chematerielid=" + chematerielid
+				+ ", chematerielname=" + chematerielname + ", cheunitname=" + cheunitname + ", cheaccountqty="
+				+ cheaccountqty + ", checheckqty=" + checheckqty + ", cheprofitandlossqty=" + cheprofitandlossqty
+				+ ", cheprofitandlossmoney=" + cheprofitandlossmoney + ", cheprice=" + cheprice + ", cheremark="
+				+ cheremark + ", enables=" + enables + "]";
+	}
+
 	public Checkdetail(String chematerielid, String chematerielname, String cheunitname, Integer cheaccountqty,
 			Integer checheckqty, Integer cheprofitandlossqty, Double cheprofitandlossmoney, Double cheprice,
 			String cheremark, Integer enables) {

@@ -79,6 +79,12 @@ public class Warehousing implements Serializable {
 		this.warengname = warengname;
 		this.warmale = warmale;
 	}
+
+	@Override
+	public String toString() {
+		return "Warehousing [warid=" + warid + ", warname=" + warname + ", warengname=" + warengname + ", warmale="
+				+ warmale + "]";
+	}
     
 	
 }

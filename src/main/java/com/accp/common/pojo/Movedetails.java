@@ -202,6 +202,14 @@ public class Movedetails implements Serializable {
 		this.mdsremark = mdsremark;
 		this.enables = enables;
 	}
+
+	@Override
+	public String toString() {
+		return "Movedetails [mdsno=" + mdsno + ", mdsmseno=" + mdsmseno + ", mdsmaterieltype=" + mdsmaterieltype
+				+ ", mdsmaterielname=" + mdsmaterielname + ", mdsmaterielspecs=" + mdsmaterielspecs
+				+ ", mdsmaterielunit=" + mdsmaterielunit + ", mdsmaterielnum=" + mdsmaterielnum + ", mdsavgcost="
+				+ mdsavgcost + ", mdscost=" + mdscost + ", mdsremark=" + mdsremark + ", enables=" + enables + "]";
+	}
     
     
 }

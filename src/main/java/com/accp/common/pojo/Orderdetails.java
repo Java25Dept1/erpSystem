@@ -415,6 +415,16 @@ public class Orderdetails implements Serializable {
 		this.odpcdh = odpcdh;
 		this.odproduction = odproduction;
 	}
+
+	@Override
+	public String toString() {
+		return "Orderdetails [odid=" + odid + ", odno=" + odno + ", odwlid=" + odwlid + ", odwlname=" + odwlname
+				+ ", odtype=" + odtype + ", oddwname=" + oddwname + ", odnumber=" + odnumber + ", odzkprice="
+				+ odzkprice + ", odzs=" + odzs + ", odprice=" + odprice + ", odmoney=" + odmoney + ", odsl=" + odsl
+				+ ", odpaid=" + odpaid + ", odamount=" + odamount + ", odzp=" + odzp + ", odremark=" + odremark
+				+ ", odyckdate=" + odyckdate + ", odwcknumber=" + odwcknumber + ", odcomb=" + odcomb + ", oddb=" + oddb
+				+ ", oddh=" + oddh + ", odsc=" + odsc + ", odpcdh=" + odpcdh + ", odproduction=" + odproduction + "]";
+	}
     
     
 }
