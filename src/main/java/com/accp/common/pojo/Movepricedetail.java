@@ -60,17 +60,17 @@ public class Movepricedetail implements Serializable {
     /**
      * 现行平均成本
      */
-    private Integer moveaveragecost;
+    private Double moveaveragecost;
 
     /**
      * 单价（自己填）
      */
-    private Integer moveprice;
+    private Double moveprice;
 
     /**
      * 调价金额
      */
-    private Integer movemoveprice;
+    private Double movemoveprice;
 
     /**
      * 保留字段
@@ -129,27 +129,27 @@ public class Movepricedetail implements Serializable {
         this.movestocks = movestocks;
     }
 
-    public Integer getMoveaveragecost() {
+    public Double getMoveaveragecost() {
         return moveaveragecost;
     }
 
-    public void setMoveaveragecost(Integer moveaveragecost) {
+    public void setMoveaveragecost(Double moveaveragecost) {
         this.moveaveragecost = moveaveragecost;
     }
 
-    public Integer getMoveprice() {
+    public Double getMoveprice() {
         return moveprice;
     }
 
-    public void setMoveprice(Integer moveprice) {
+    public void setMoveprice(Double moveprice) {
         this.moveprice = moveprice;
     }
 
-    public Integer getMovemoveprice() {
+    public Double getMovemoveprice() {
         return movemoveprice;
     }
 
-    public void setMovemoveprice(Integer movemoveprice) {
+    public void setMovemoveprice(Double movemoveprice) {
         this.movemoveprice = movemoveprice;
     }
 
@@ -178,8 +178,8 @@ public class Movepricedetail implements Serializable {
     }
 
 	public Movepricedetail(Integer moveinile, String moveorderno, String movematerielno, String movematerielname,
-			String movespectype, String moveunit, Integer movestocks, Integer moveaveragecost, Integer moveprice,
-			Integer movemoveprice, String safetyone, String safetytwo, Integer enables) {
+			String movespectype, String moveunit, Integer movestocks, Double moveaveragecost, Double moveprice,
+			Double movemoveprice, String safetyone, String safetytwo, Integer enables) {
 		super();
 		this.moveinile = moveinile;
 		this.moveorderno = moveorderno;
