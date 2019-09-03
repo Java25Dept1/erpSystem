@@ -3,8 +3,6 @@ package com.accp.common.pojo;
 import java.io.Serializable;
 import java.util.Date;
 
-import com.baomidou.mybatisplus.annotation.TableId;
-
 /**
  * minusandadddetail  库存进出明细表 
  * @author 
@@ -13,7 +11,6 @@ public class Minusandadddetail implements Serializable {
     /**
      * 主键ID
      */
-	@TableId
     private Integer minusaddid;
 
     /**

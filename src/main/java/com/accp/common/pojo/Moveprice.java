@@ -206,10 +206,8 @@ public class Moveprice implements Serializable {
 		return "Moveprice [moveorderno=" + moveorderno + ", movedate=" + movedate + ", moveadjust=" + moveadjust
 				+ ", movestorageno=" + movestorageno + ", movemake=" + movemake + ", movecheck=" + movecheck
 				+ ", moveremark=" + moveremark + ", moveauditingstate=" + moveauditingstate + ", enables=" + enables
-				+ ", details=" + details + "]";
+				+ "]";
 	}
-	
-	
     
     
 }

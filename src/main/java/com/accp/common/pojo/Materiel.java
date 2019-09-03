@@ -3,8 +3,6 @@ package com.accp.common.pojo;
 import java.io.Serializable;
 import java.util.Date;
 
-import com.baomidou.mybatisplus.annotation.TableId;
-
 /**
  * materiel  物料主文件设定
  * @author 
@@ -13,8 +11,6 @@ public class Materiel implements Serializable {
     /**
      * 物料编号                      
      */
-
-	@TableId
     private String matid;
 
     /**
