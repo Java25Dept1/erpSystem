@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.accp.longHai.dao.PurchaseDao">
+
+    <select id="findDepttabPojos" resultType="com.accp.longHai.pojo.DepttabPojo">
+        SELECT * FROM Depttab
+  </select>
+    <select id="findEmployeePojos" resultType="com.accp.longHai.pojo.EmployeePojo">
+    SELECT  * FROM Employee
+  </select>
+    <select id="findOnMaterielPojos" resultType="com.accp.longHai.pojo.MaterielPojo">
+        SELECT * FROM Materiel
+        <where>
+        <if test="one!=null and one!='' ">
+        mattypeid =#{one}
+        </if>
+        </where>
+    </select>
+</mapper>
