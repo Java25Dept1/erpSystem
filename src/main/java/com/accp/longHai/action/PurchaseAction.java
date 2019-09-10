@@ -7,6 +7,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -20,6 +21,9 @@ import com.accp.longHai.pojo.StockapplyPojo;
 import com.accp.longHai.pojo.StockapplydetailsPojo;
 import com.accp.longHai.pojo.StockapplytypePojo;
 import com.alibaba.fastjson.JSON;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
+import com.github.pagehelper.PageInfo;
 
 /**
  * @program: erp->PurchaseAction
@@ -167,8 +171,9 @@ public class PurchaseAction {
     * @Date: 2019/8/30
     */
     @RequestMapping("modifyStockapply")
-    public Map<String,String> modifyStockapply(StockapplyPojo stockapplyPojo){
+    public Map<String,String> modifyStockapply(@RequestBody() StockapplyPojo stockapplyPojo){
         Map<String, String> msg = new HashMap<>();
+        System.out.println(JSON.toJSONString(stockapplyPojo));
         try {
             if(biz.modifyStockapply(stockapplyPojo) > 0){
                 msg.put("code", "200");
@@ -192,7 +197,7 @@ public class PurchaseAction {
     * @Date: 2019/8/30
     */
     @RequestMapping("modifyStockapplydetails")
-    public Map<String,String> modifyStockapplydetails(StockapplydetailsPojo stockapplydetailsPojo){
+    public Map<String,String> modifyStockapplydetails(@RequestBody StockapplydetailsPojo stockapplydetailsPojo){
         Map<String,String> msg = new HashMap<>();
         try {
             if(biz.modifyStockapplydetails(stockapplydetailsPojo) > 0){
@@ -216,6 +221,7 @@ public class PurchaseAction {
     * @Author: Charon.棋
     * @Date: 2019/8/30
     */
+    @RequestMapping("deleteStockapply")
     public Map<String,String> deleteStockapply(String one){
         Map<String,String> msg = new HashMap<>();
         try {
@@ -231,5 +237,20 @@ public class PurchaseAction {
             msg.put("msg", "服务器错误");
         }
         return msg;
+    }
+    /**
+     * 查询请购单 
+     * 参数  页码 尺寸 条件 
+     * */
+    @RequestMapping("getStockapply/{c}/{s}")
+    public PageInfo<StockapplyPojo> getStockapply(@PathVariable("c")Integer c,@PathVariable("s")Integer s , @RequestBody()StockapplyPojo  stockApply){
+    	return biz.getStockApply(c, s, stockApply);
+    }
+    /**
+     * 查询详表 
+     * */
+    @RequestMapping("getStockApplyDetails/{appid}")
+    public List<StockapplydetailsPojo> getStockApplyDetails(@PathVariable("appid") String appid){
+    	return biz.getStockApplyDetails(appid);
     }
 }

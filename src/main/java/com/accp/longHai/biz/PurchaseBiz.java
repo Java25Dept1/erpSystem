@@ -1,21 +1,32 @@
 ﻿package com.accp.longHai.biz;
 
-import com.accp.longHai.dao.PurchaseDao;
-import com.accp.longHai.dao.StockapplyPlusDao;
-import com.accp.longHai.dao.StockapplydetailsPlusDao;
-import com.accp.longHai.dao.StockapplytypeDao;
-import com.accp.longHai.pojo.*;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import java.util.List;
+
+import javax.annotation.Resource;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.annotation.Resource;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import com.accp.longHai.dao.PurchaseDao;
+import com.accp.longHai.dao.StockapplyPlusDao;
+import com.accp.longHai.dao.StockapplydetailsPlusDao;
+import com.accp.longHai.dao.StockapplytypeDao;
+import com.accp.longHai.pojo.DepttabPojo;
+import com.accp.longHai.pojo.EmployeePojo;
+import com.accp.longHai.pojo.MaterielPojo;
+import com.accp.longHai.pojo.MaterieltypePojo;
+import com.accp.longHai.pojo.StockapplyPojo;
+import com.accp.longHai.pojo.StockapplydetailsPojo;
+import com.accp.longHai.pojo.StockapplytypePojo;
+import com.alibaba.fastjson.JSON;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
+import com.baomidou.mybatisplus.core.toolkit.StringUtils;
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 
 /**
  * @program: erp->PurchaseBiz
@@ -188,15 +199,11 @@ public class PurchaseBiz {
      */
     @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.READ_COMMITTED, readOnly = false)
     public int modifyStockapplydetails(StockapplydetailsPojo stockapplydetailsPojo) {
-        try {
-            QueryWrapper<StockapplydetailsPojo> query = new QueryWrapper<StockapplydetailsPojo>();
-            query.lambda().eq(StockapplydetailsPojo::getAppid, stockapplydetailsPojo.getAppid());
-            int i = stockapplydetailsPlusDao.update(stockapplydetailsPojo, query);
-            return i;
-        } catch (Exception e) {
-            return 0;
-        }
+    	UpdateWrapper<StockapplydetailsPojo> qw=Wrappers.update();
+    	qw.eq("appid",stockapplydetailsPojo.getAppid());
+    	return stockapplydetailsPlusDao.delete(qw);
     }
+    
 
     /**
      * @Description: 根据采购请购单编号删除采购请购单
@@ -208,10 +215,34 @@ public class PurchaseBiz {
     @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.READ_COMMITTED, readOnly = false)
     public int deleteStockapply(String one) {
         //先删除详表
-        if(stockapplydetailsPlusDao.deleteById(one) > 0){
+    	UpdateWrapper<StockapplydetailsPojo> qw=Wrappers.update();
+    	qw.eq("appid",one);
+        if(stockapplydetailsPlusDao.delete(qw) > 0){
             //删除主表
             return stockapplyPlusDao.deleteById(one);
         }
         return 0;
+    }
+    /**
+     * 查询主表 (可根据编号 单况 请购类型 申请人 请购日期)
+     * */
+    public PageInfo<StockapplyPojo> getStockApply(Integer c,Integer s ,StockapplyPojo stockApply){
+    	PageHelper.startPage(c,s);
+    	//查询构造器
+    	QueryWrapper<StockapplyPojo> qw=Wrappers.query();
+    	qw.like(StringUtils.checkValNotNull(stockApply.getAppid()),"appid", stockApply.getAppid())
+    	.eq(StringUtils.checkValNotNull( stockApply.getAppcircs()),"appcircs", stockApply.getAppcircs())
+    	.like(StringUtils.checkValNotNull(stockApply.getApptype()),"apptype",stockApply.getApptype())
+    	.like(StringUtils.checkValNotNull(stockApply.getApppersonid()),"Apppersonid", stockApply.getApppersonid())
+    	.between(StringUtils.checkValNotNull(stockApply.getAppdate()), "Appdate", stockApply.getAppdate(),stockApply.getExtend4());
+    	return new PageInfo<>(stockapplyPlusDao.selectList(qw));
+    }
+    /**
+     * 查询详表 
+     * */
+    public List<StockapplydetailsPojo> getStockApplyDetails(String appid){
+    	QueryWrapper<StockapplydetailsPojo> qw=Wrappers.query();
+    	qw.eq("appid",appid);
+    	return stockapplydetailsPlusDao.selectList(qw);
     }
 }

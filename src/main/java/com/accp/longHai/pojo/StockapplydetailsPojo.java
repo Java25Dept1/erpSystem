@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
-import com.baomidou.mybatisplus.annotation.TableId;
+import com.alibaba.fastjson.annotation.JSONField;
 import com.baomidou.mybatisplus.annotation.TableName;
 
 /**
@@ -87,11 +87,13 @@ public class StockapplydetailsPojo implements Serializable {
     /**
      * 需求日期
      */
+    @JSONField(format="yyyy-MM-dd")
     private Date apddemanddate;
 
     /**
      * 建议采购日期
      */
+    @JSONField(format="yyyy-MM-dd")
     private Date apdstockdate;
 
     /**

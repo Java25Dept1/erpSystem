@@ -2,18 +2,19 @@ package com.accp.longHai.pojo;
 
 import java.util.Date;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 @TableName(value="stockapply")
 public class StockapplyPojo {
 	@TableId
-    private String appid;
-
+    private String appid;//请购单编号
+	 @JSONField(format="yyyy-MM-dd")
     private Date appdate;
 
-    private String apptype;
+    private String apptype;//请购单类型
 
-    private Integer appcircs;
+    private Integer appcircs;//单况
 
     private String appperson;
 
@@ -45,7 +46,7 @@ public class StockapplyPojo {
 
     private String extend3;
 
-    private String extend4;
+    private String extend4;//用来做日期区间查询时的结束时间
 
     public String getAppid() {
         return appid;
